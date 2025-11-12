@@ -1,0 +1,14 @@
+@use '@/assets/styles/_mixins.scss' as *;
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    gap: 0 0;
+    min-height: 100vh;
+
+    .content {
+        display: flex;
+        width: 100%;
+    }
+}

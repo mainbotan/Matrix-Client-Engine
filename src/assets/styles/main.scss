@@ -1,10 +1,11 @@
 @use 'base/reset';
 @use 'base/typography' as *;
-@use 'base/themes/main' as main;
+@use 'base/themes/dark' as dark;
+@use 'base/themes/light' as light;
 
 :root {
   @include font-styles;
-  @include main.theme;
+  @include light.theme;
 
   --transition: 0.3s ease;
   --pc-min-width: 1420px;

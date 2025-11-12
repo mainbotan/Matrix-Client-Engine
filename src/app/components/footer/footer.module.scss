@@ -1,0 +1,71 @@
+@use '@/assets/styles/_mixins.scss' as *;
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    color: #e2e2e2;
+    
+    .focus {
+        display: flex;
+        flex: 1;
+        max-width: 60rem;
+        width: 100%;
+        padding: 2rem 1rem;
+        min-height: 20.5rem;
+        flex-flow: row nowrap;
+        gap: 3rem;
+        font-size: 0.55em;
+
+        @media (max-width: 720px) {
+            font-size: 1em;
+            flex-direction: column;
+            min-height: 30.5rem;
+        }
+    }
+}
+
+// Sections
+.box {
+    display: flex;
+    align-items: start;
+
+    &.logo {
+        display: inline-flex;
+        font-size: 2.2em;
+        color: #ffffff;
+        font-weight: 600;
+    }
+    &.sections {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1.4em;
+        width: 100%;
+        font-size: 0.75em;
+
+        .col {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 1em;
+            flex: 1;
+
+            .section.capture {
+                font-weight: 600;
+                letter-spacing: 0.04em;
+                margin-bottom: 0.3em;
+            }
+            .section {
+                transition: color var(--transition);
+
+                &:hover {
+                    color: var(--color-brand);
+                    @include cursor(pointer);
+                }
+            }
+        }
+
+        @media (max-width: 720px) {
+            flex-direction: column;
+        }
+    }
+}

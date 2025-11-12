@@ -1,0 +1,61 @@
+@mixin theme {
+    // ==================== CORE IDENTITY ====================
+    --color-brand: #d6379c;
+    --color-brand-light: #000000;
+    --color-brand-pale: #e8ecf5;
+    --color-leader: #ffffff;
+    --color-contrast: #000000;
+    
+    // ==================== AIRY SURFACES ====================
+    --color-surface-primary: #ffffff;
+    --color-surface-secondary: #efefef;
+    --color-surface-tertiary: #b8b8b8;
+    --color-surface-elevated: #ffffff;
+    --color-surface-overlay: rgba(214, 214, 214, 0.95);
+
+    // ==================== CALM TEXT ====================
+    --color-text-primary: #0c0c0c;
+    --color-text-secondary: #202020;
+    --color-text-hint: #64748b;
+    --color-text-description: #4d4d4d;
+    --color-text-ghost: #cbd5e1;
+
+    // ==================== SUBTLE STROKES ====================
+    --color-stroke-primary: #e2e8f0;
+    --color-stroke-secondary: #cbd5e1;
+    --color-stroke-tertiary: #94a3b8;
+    --color-stroke-focus: var(--color-brand-light);
+
+    // ==================== GENTLE INDICATORS ====================
+    --color-error: #f87171;
+    --color-error-light: #fecaca;
+    --color-warning: #fbbf24;
+    --color-warning-light: #fef3c7;
+    --color-normal: #60a5fa;
+    --color-normal-light: #dbeafe;
+    --color-critical: #ef4444;
+    --color-success: #34d399;
+    --color-success-light: #d1fae5;
+    
+    // ==================== ICONS ====================
+    --color-icon-primary: #adadad;
+
+    // ==================== EXTENDED PALETTE ====================
+    --color-red: #f87171;
+    --color-blue: #7c93c1;
+    --color-orange: #fb923c;
+    --color-yellow: #facc15;
+    --color-green: #34d399;
+    --color-purple: #4e20c3;
+    --color-cyan: #22d3ee;
+    --color-magenta: #f472b6;
+
+    // ==================== EFFECTS & GRADIENTS ====================
+    --gradient-brand: linear-gradient(135deg, var(--color-brand) 0%, var(--color-blue) 100%);
+    --gradient-surface: linear-gradient(135deg, var(--color-surface-primary) 0%, var(--color-surface-secondary) 100%);
+    --gradient-subtle: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    
+    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-gentle: 0 4px 6px rgba(0, 0, 0, 0.03);
+    --shadow-floating: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
