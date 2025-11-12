@@ -1,0 +1,19 @@
+.frame {
+    display: inline-flex;
+    font-size: 1em;
+    flex-flow: row nowrap;
+    gap: 0.2em;
+    font-weight: 600;
+    color: #ffffff;
+
+    .o {
+        color: var(--color-brand) !important;
+    }
+
+    &.classic {
+        color: #ffffff;
+    }
+    &.invert {
+        color: #000000;
+    }
+}
