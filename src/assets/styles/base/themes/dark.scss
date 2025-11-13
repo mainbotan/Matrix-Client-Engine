@@ -1,24 +1,29 @@
 @mixin theme {
     // ==================== CORE IDENTITY ====================
     --color-brand: #d6379c;
-    --color-brand-light: #000000;
-    --color-brand-pale: #e8ecf5;
-    --color-leader: #ffffff;
-    --color-contrast: #000000;
+    --color-brand-light: var(--color-brand);
+    --color-brand-pale: var(--color-brand);
+    --color-leader: #000000;
+    --color-contrast: #ebebeb;
     
     // ==================== AIRY SURFACES ====================
-    --color-surface-primary: #1d1d1d;
-    --color-surface-secondary: #444444;
+    --color-surface-primary: #151515;
+    --color-surface-secondary: #181818;
     --color-surface-tertiary: #363636;
-    --color-surface-elevated: #ffffff;
-    --color-surface-overlay: rgba(226, 226, 226, 0.95);
+    --color-surface-elevated: #2d2d2d;
+    --color-surface-overlay: rgba(33, 33, 33, 0.95);
 
     // ==================== CALM TEXT ====================
-    --color-text-primary: #0c0c0c;
-    --color-text-secondary: #202020;
-    --color-text-hint: #64748b;
-    --color-text-description: #4d4d4d;
-    --color-text-ghost: #cbd5e1;
+    --color-text-primary: #ededed;
+    --color-text-secondary: #c2c2c2;
+    --color-text-hint: #4793fd;
+    --color-text-description: #575757;
+    --color-text-ghost: #c1c1c1;
+    --color-contrast-text-primary: #0c0c0c;
+    --color-contrast-text-secondary: #202020;
+    --color-contrast-text-hint: #4d93f6;
+    --color-contrast-text-description: #868585;
+    --color-contrast-text-ghost: #cbd5e1;
 
     // ==================== SUBTLE STROKES ====================
     --color-stroke-primary: #e2e8f0;
@@ -37,13 +42,16 @@
     --color-success: #34d399;
     --color-success-light: #d1fae5;
 
+    // ==================== ICONS ====================
+    --color-icon-primary: #adadad;
+    
     // ==================== EXTENDED PALETTE ====================
     --color-red: #f87171;
     --color-blue: #7c93c1;
     --color-orange: #fb923c;
     --color-yellow: #facc15;
     --color-green: #34d399;
-    --color-purple: #a78bfa;
+    --color-purple: #4e20c3;
     --color-cyan: #22d3ee;
     --color-magenta: #f472b6;
 

@@ -1,8 +1,8 @@
 @mixin theme {
     // ==================== CORE IDENTITY ====================
     --color-brand: #d6379c;
-    --color-brand-light: #000000;
-    --color-brand-pale: #e8ecf5;
+    --color-brand-light: var(--color-brand);
+    --color-brand-pale: var(--color-brand);
     --color-leader: #ffffff;
     --color-contrast: #272727;
     
@@ -16,7 +16,7 @@
     // ==================== CALM TEXT ====================
     --color-text-primary: #0c0c0c;
     --color-text-secondary: #202020;
-    --color-text-hint: #64748b;
+    --color-text-hint: #4d93f6;
     --color-text-description: #4d4d4d;
     --color-text-ghost: #cbd5e1;
     --color-contrast-text-primary: #eee;

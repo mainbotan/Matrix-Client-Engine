@@ -33,6 +33,9 @@ html, body {
     font-size: 1.2em;
   }
 }
+[data-theme="dark"] {
+  @include dark.theme;
+}
 @media (max-width: 720px) {
   html, body {
     -ms-overflow-style: none;  /* IE и Edge */

@@ -1,15 +1,17 @@
 @use '@/assets/styles/_mixins.scss' as *;
 
 .container {
+    position: sticky;
     display: flex;
     width: 12rem;
     max-width: 12rem;
+    height: 100vh;
     background-color: var(--color-surface-secondary);
     flex-flow: column nowrap;
     gap: 0;
-    position: relative;
     overflow: hidden;
     padding-bottom: 3rem;
+    top: 0px;
 
     .label {
         display: flex;

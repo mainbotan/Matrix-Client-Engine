@@ -45,6 +45,10 @@ export default function Page() {
                                     <div className={styles.info}>
                                         <div className={styles.name}>Клиенты</div>
                                         <div className={styles._meta}>Смотрите текущее состояние клиентской базы.</div>
+                                        <div className={styles.link}>
+                                            <span className={styles.text}>Что нового в версии 2.4x</span>
+                                            <span className={styles.icon}><Arrow className={styles.svg} /></span>
+                                        </div>
                                     </div>
                                     <div className={styles.actions}>
                                         <div className={styles.action}><Arrow className={styles.svg} /></div>
