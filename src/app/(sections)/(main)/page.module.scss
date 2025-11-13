@@ -178,3 +178,18 @@ $animation-time: 0.6s;
         }
     }
 }
+
+// Matrix Overlay
+.matrix {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 2rem 0rem;
+
+    .block {
+        background-color: #0a0a0afa;
+        border: 1px solid var(--color-stroke-primary);
+        height: 18rem;
+        overflow: hidden;
+        border-radius: 0.6rem;
+    }
+}

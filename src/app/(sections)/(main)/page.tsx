@@ -4,6 +4,7 @@ import Arrow from '@/assets/ui-kit/icons/arrow';
 import styles from './page.module.scss';
 import Container from "@/app/components/container/container";
 import clsx from 'clsx';
+import MatrixOverlay from './matrix-overlay/matrix-overlay';
 
 export default function Page() {
     return (
@@ -82,6 +83,9 @@ export default function Page() {
                                     </div>
                                 </div>
                         </div>
+                    </div>
+                    <div className={styles.matrix}>
+                        <div className={styles.block}><MatrixOverlay /></div>
                     </div>
                 </div>
             </div>

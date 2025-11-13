@@ -1,0 +1,193 @@
+// rays.module.scss
+.rays {
+    position: absolute;
+    z-index: 1;
+    bottom: -20%;
+    left: 0px;
+    
+    width: 100%;
+    height: 120%;
+    display: block;
+
+    path {
+        stroke-width: 1;
+        fill: none;
+        stroke: #000000;
+        stroke-dasharray: 600;
+        stroke-dashoffset: 600;
+        animation: radialFan 7s ease-out infinite;
+        opacity: 0;
+        transform-origin: 324px 332px;
+
+        // Для мобильных устройств - статические лучи
+        @media (max-width: 768px) {
+            animation: none;
+            stroke-dashoffset: 0;
+            opacity: 1;
+            filter: none;
+            transform: none;
+        }
+    }
+    
+    // Веер слева направо с плавными переходами
+    .ray14 { 
+        stroke: #ff4444;
+        animation-delay: 0s;
+        
+        @media (max-width: 768px) {
+            opacity: 0.6;
+        }
+    }
+    .ray12 { 
+        stroke: #ff6666;
+        animation-delay: 0.15s;
+        
+        @media (max-width: 768px) {
+            opacity: 0.5;
+        }
+    }
+    .ray10 { 
+        stroke: #8800ff;
+        animation-delay: 0.3s;
+        
+        @media (max-width: 768px) {
+            opacity: 0.6;
+        }
+    }
+    .ray8 { 
+        stroke: #88ff00;
+        animation-delay: 0.45s;
+        
+        @media (max-width: 768px) {
+            opacity: 0.5;
+        }
+    }
+    .ray6 { 
+        stroke: #00ffff;
+        animation-delay: 0.6s;
+        
+        @media (max-width: 768px) {
+            opacity: 0.6;
+        }
+    }
+    .ray4 { 
+        stroke: #ffff00;
+        animation-delay: 0.75s;
+        
+        @media (max-width: 768px) {
+            opacity: 0.5;
+        }
+    }
+    .ray1 { 
+        stroke: #f08b8b;
+        animation-delay: 0.9s;
+        
+        @media (max-width: 768px) {
+            opacity: 0.7;
+        }
+    }
+    .ray5 { 
+        stroke: #ff00ff;
+        animation-delay: 1.05s;
+        
+        @media (max-width: 768px) {
+            opacity: 0.5;
+        }
+    }
+    .ray7 { 
+        stroke: #ff8800;
+        animation-delay: 1.2s;
+        
+        @media (max-width: 768px) {
+            opacity: 0.6;
+        }
+    }
+    .ray9 { 
+        stroke: #0088ff;
+        animation-delay: 1.35s;
+        
+        @media (max-width: 768px) {
+            opacity: 0.5;
+        }
+    }
+    .ray11 { 
+        stroke: #ff0088;
+        animation-delay: 1.5s;
+        
+        @media (max-width: 768px) {
+            opacity: 0.6;
+        }
+    }
+    .ray13 { 
+        stroke: #cc66ff;
+        animation-delay: 1.65s;
+        
+        @media (max-width: 768px) {
+            opacity: 0.5;
+        }
+    }
+    .ray15 { 
+        stroke: #44ff44;
+        animation-delay: 1.8s;
+        
+        @media (max-width: 768px) {
+            opacity: 0.6;
+        }
+    }
+
+    @keyframes radialFan {
+        0% {
+            stroke-dashoffset: 600;
+            opacity: 0;
+            filter: blur(5px);
+        }
+        8.33% {
+            opacity: 0.4;
+            filter: blur(2px);
+        }
+        16.67% {
+            opacity: 0.8;
+            filter: blur(0px);
+        }
+        33.33% {
+            stroke-dashoffset: 0;
+            opacity: 1;
+            filter: blur(0px);
+        }
+        44.44% {
+            opacity: 0.3;
+            filter: blur(1px);
+        }
+        50% {
+            stroke-dashoffset: 0;
+            opacity: 0;
+            filter: blur(3px);
+        }
+        100% {
+            stroke-dashoffset: 600;
+            opacity: 0;
+            filter: blur(5px);
+        }
+    }
+
+    // Дополнительные стили для мобильных устройств
+    @media (max-width: 768px) {
+        bottom: -15%;
+        height: 115%;
+        
+        path {
+            stroke-width: 0.8; // Чуть тоньше на мобильных
+        }
+    }
+
+    // Для очень маленьких экранов
+    @media (max-width: 480px) {
+        bottom: -10%;
+        height: 110%;
+        
+        path {
+            stroke-width: 0.6;
+            opacity: 0.5; // Еще более прозрачные
+        }
+    }
+}
