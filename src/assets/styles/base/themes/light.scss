@@ -4,7 +4,7 @@
     --color-brand-light: #000000;
     --color-brand-pale: #e8ecf5;
     --color-leader: #ffffff;
-    --color-contrast: #000000;
+    --color-contrast: #272727;
     
     // ==================== AIRY SURFACES ====================
     --color-surface-primary: #ffffff;
@@ -19,6 +19,11 @@
     --color-text-hint: #64748b;
     --color-text-description: #4d4d4d;
     --color-text-ghost: #cbd5e1;
+    --color-contrast-text-primary: #eee;
+    --color-contrast-text-secondary: #d8d8d8;
+    --color-contrast-text-hint: var(--color-text-hint);
+    --color-contrast-text-description: #a8a8a8;
+    --color-contrast-text-ghost: #bcbcbc;
 
     // ==================== SUBTLE STROKES ====================
     --color-stroke-primary: #e2e8f0;
