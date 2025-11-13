@@ -9,14 +9,15 @@ import Clients from '@/assets/ui-kit/icons/clients';
 import Deal from '@/assets/ui-kit/icons/deal';
 import Warehouse from '@/assets/ui-kit/icons/warehouse';
 import Graph from '@/assets/ui-kit/icons/graph';
+import Link from 'next/link';
 
 export default function NavBar() {
     return (
         <div data-theme="light" className={styles.container}>
-            <div className={styles.label}>
+            <Link href='/' className={styles.label}>
                 <div className={styles.matrix}>Matrix</div>
-            </div>
-            <div className={styles.company}>
+            </Link>
+            <Link href='/company' title='Профиль организации' className={styles.company}>
                 <div className={styles.label}>
                     <div className={styles.info}>
                         {/* <div className={styles.counter}>183 <span className={styles.secondary}>дня</span></div> */}
@@ -24,16 +25,16 @@ export default function NavBar() {
                         <div className={styles._meta}>Starter Kit</div>
                     </div>
                 </div>
-            </div>
+            </Link>
             <section className={styles.sections}>
                 <div className={styles.grid}>
-                    <section className={clsx(styles.section, styles.active)}>
+                    <Link href='/crm'><section className={clsx(styles.section, styles.active)}>
                         <div className={styles.icon}><Clients className={styles.svg} /></div>
                         <div className={styles.info}>
                             <div className={styles.title}>CRM</div>
                             <div className={styles._meta}>Управление клиентами</div>
                         </div>
-                    </section>
+                    </section></Link>
                     <section className={clsx(styles.section, styles.active)}>
                         <div className={styles.icon}><Deal className={styles.svg} /></div>
                         <div className={styles.info}>

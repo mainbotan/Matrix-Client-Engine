@@ -84,6 +84,40 @@ export default function Page() {
                                 </div>
                         </div>
                     </div>
+                    <div className={styles.widgets}>
+                        <div className={styles.grid}>
+                            <div className={clsx(styles.widget, styles.positive)}>
+                                <div className={styles.indicator} />
+                                <div className={styles.content}>
+                                    <div className={clsx(styles.value, styles.sm)}>1 220 234 <span className={styles.secondary}>&#8381;</span></div>
+                                    <div className={styles.info}>
+                                        <div className={styles.name}>Принесли продажи</div>
+                                        <div className={styles._meta}>За последний месяц</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={clsx(styles.widget, styles.negative)}>
+                                <div className={styles.indicator} />
+                                <div className={styles.content}>
+                                    <div className={styles.value}>400</div>
+                                    <div className={styles.info}>
+                                        <div className={styles.name}>Сделок обработано</div>
+                                        <div className={styles._meta}>За последний месяц</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={clsx(styles.widget, styles.stagnation)}>
+                                <div className={styles.indicator} />
+                                <div className={styles.content}>
+                                    <div className={styles.value}>29</div>
+                                    <div className={styles.info}>
+                                        <div className={styles.name}>Новых клиентов</div>
+                                        <div className={styles._meta}>За последний месяц</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className={styles.matrix}>
                         <div className={styles.block}><MatrixOverlay /></div>
                     </div>
