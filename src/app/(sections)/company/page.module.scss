@@ -1,0 +1,118 @@
+@use '@/assets/styles/_mixins.scss' as *;
+
+.container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 0px;
+    min-height: 200vh;
+
+    .focus {
+        display: inline-flex;
+        width: 100%;
+        max-width: 50rem;
+        padding: 3rem 2rem;
+        gap: 1rem;
+        flex-flow: column nowrap;
+        color: var(--color-text-primary);
+
+        // * {
+        //     outline: 1px dashed red;
+        // }
+    }
+}
+
+
+// Header
+.header {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+
+    .title {
+        font-size: 0.9em;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+        width: 100%;
+        @include animated-block();
+    }
+}
+
+// Navigation
+.navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.7rem;
+    font-size: 0.4em;
+
+    .section {
+        height: 3.4em;
+        background-color: var(--color-surface-secondary);
+        color: var(--color-text-primary);
+        border-radius: 0.8em;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0em 1.4em;
+        transition: background-color var(--transition), color var(--transition);
+        cursor: pointer;
+
+        &.active {
+            background-color: var(--color-contrast);
+            color: var(--color-contrast-text-primary);
+        }
+        &:hover {
+            background-color: var(--color-contrast);
+            color: var(--color-contrast-text-primary);
+        }
+    }
+}
+
+// Sections
+.sections {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    font-size: 0.4em;
+
+    .section {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0.2em;
+
+        .capture {
+            padding: 0.6em;
+        }
+        .basic {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 1em;
+            padding: 1em;
+            background-color: var(--color-surface-secondary);
+            border-top: 1px solid var(--color-stroke-secondary);
+            border-bottom: 1px solid var(--color-stroke-secondary);
+
+            .info {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 0.3em;
+                width: 100%;
+
+                .title {}
+                .about {
+                    color: var(--color-text-description);
+                    font-size: 0.9em;
+                }
+            }
+            .value {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 0.2em;
+                width: 20rem;
+                align-items: center;
+                align-items: end;
+            }
+        }
+    }
+}

@@ -3,16 +3,16 @@
     --color-brand: #d6379c;
     --color-brand-light: var(--color-brand);
     --color-brand-pale: var(--color-brand);
-    --color-leader: #000000;
+    --color-leader: #0a0a0a;
     --color-contrast: #ebebeb;
     
     // ==================== AIRY SURFACES ====================
     --color-surface-primary: #151515;
-    --color-surface-secondary: #181818;
-    --color-surface-tertiary: #454545;
-    --color-surface-elevated: #2d2d2d;
-    --color-surface-overlay: rgba(33, 33, 33, 0.95);
-    --color-surface-glass: #0e0e0e91;
+    --color-surface-secondary: #1c1d1f;
+    --color-surface-tertiary: rgb(32, 32, 32);
+    --color-surface-elevated: #1c1b1b;
+    --color-surface-overlay: rgba(18, 17, 17, 0.95);
+    --color-surface-glass: rgba(14, 13, 13, 0.569);
 
     // ==================== CALM TEXT ====================
     --color-text-primary: #ededed;

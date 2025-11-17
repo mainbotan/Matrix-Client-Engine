@@ -10,7 +10,7 @@
     --color-surface-primary: #ffffff;
     --color-surface-secondary: #efefef;
     --color-surface-tertiary: #b8b8b8;
-    --color-surface-elevated: #ffffff;
+    --color-surface-elevated: #e2e1e1cf;
     --color-surface-overlay: rgba(214, 214, 214, 0.95);
     --color-surface-glass: #c3c3c391;
 
@@ -27,13 +27,14 @@
     --color-contrast-text-ghost: #bcbcbc;
 
     // ==================== SUBTLE STROKES ====================
-    --color-stroke-primary: #e2e8f0;
-    --color-stroke-secondary: #cbd5e1;
+    --color-stroke-primary: #ecf0f4;
+    --color-stroke-secondary: #d7d9dc;
     --color-stroke-tertiary: #94a3b8;
     --color-stroke-focus: var(--color-brand-light);
 
     // ==================== GENTLE INDICATORS ====================
     --color-error: #f87171;
+    --color-error-alpha: rgba(235, 121, 121, 0.465);
     --color-error-light: #fecaca;
     --color-warning: #fbbf24;
     --color-warning-light: #fef3c7;
@@ -48,7 +49,7 @@
 
     // ==================== EXTENDED PALETTE ====================
     --color-red: #f87171;
-    --color-blue: #7c93c1;
+    --color-blue: #60a5fa;
     --color-orange: #fb923c;
     --color-yellow: #facc15;
     --color-green: #34d399;
