@@ -12,6 +12,7 @@ import Clients from '@/assets/ui-kit/icons/clients';
 import Cloud from '@/assets/ui-kit/icons/cloud';
 import Input from '@/assets/ui-kit/input/input';
 import { usePathname } from 'next/navigation';
+import Bell from '@/assets/ui-kit/icons/bell';
 
 export default function Header() {
     const pathname = usePathname();
@@ -36,7 +37,7 @@ export default function Header() {
                     </div>
                     <div className={styles.search}><Input className={styles.input} variant='default' placeholder='Клиент, сделка, сотрудник, отчёт...' /></div>
                     <div className={styles.actions}>
-                        <div className={clsx(styles.action, styles.compact)}><Cloud className={styles.svg} /></div>
+                        <div className={clsx(styles.action, styles.compact)}><Bell className={styles.svg} /></div>
                         <Link href='/deals/create'><Button className={styles.action} variant='contrast' >Мастер-сделка</Button></Link>
                     </div>
                     <div className={styles.user}>
