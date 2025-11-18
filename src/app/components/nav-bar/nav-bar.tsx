@@ -29,13 +29,15 @@ export default function NavBar() {
             <section className={styles.sections}>
                 <div className={styles.grid}>
                     <Link href='/crm'><section className={clsx(styles.section, styles.active)}>
-                        <div className={styles.icon}><Clients className={styles.svg} /></div>
-                        <div className={styles.info}>
-                            <div className={styles.title}>CRM</div>
-                            <div className={styles._meta}>Управление клиентами</div>
+                        <div className={styles.basic}>
+                            <div className={styles.icon}><Clients className={styles.svg} /></div>
+                            <div className={styles.info}>
+                                <div className={styles.title}>CRM</div>
+                                <div className={styles._meta}>Управление клиентами</div>
+                            </div>
                         </div>
                     </section></Link>
-                    <section className={clsx(styles.section, styles.active)}>
+                    {/* <section className={clsx(styles.section, styles.active)}>
                         <div className={styles.icon}><Deal className={styles.svg} /></div>
                         <div className={styles.info}>
                             <div className={styles.title}>Сделки</div>
@@ -64,18 +66,21 @@ export default function NavBar() {
                         <div className={styles.info}>
                             <div className={styles.title}>Отчёты & Аналитика</div>
                         </div>
-                    </section>
+                    </section> */}
                 </div>
             </section>
             <div className={styles.widgets}>
-                <div className={styles.widget}>
-
+                <div className={clsx(styles.widget, styles.contrast)}>
+                    <div className={styles.value}>245</div>
+                    <div className={styles.title}>Новых сделок</div>
                 </div>
                 <div className={styles.widget}>
-                    
+                    <div className={styles.value}>43</div>
+                    <div className={styles.title}>Новых клиентов</div>
                 </div>
                 <div className={styles.widget}>
-                    
+                    <div className={styles.value}>231 920 <span className={styles.secondary}>&#8381;</span></div>
+                    <div className={styles.title}>Суммарно</div>
                 </div>
             </div>
             <div className={styles.account}>

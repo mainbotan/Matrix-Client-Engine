@@ -112,47 +112,70 @@
 
         .section {
             display: flex;
-            flex-flow: row nowrap;
-            gap: 0.7em;
-            padding: 0 0.9rem;
-            height: 2.3rem;
-            overflow: hidden;
-            transition: background-color var(--transition);
-            @include cursor(pointer);
+            flex-flow: column nowrap;
+            gap: 0em;
 
-            .icon {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-
-                .svg {
-                    width: 1.6em;
-                    height: 1.6em;
-                    fill: var(--color-icon-primary);
-                }
-            }
-            .info {
+            .basic {
                 display: flex;
-                justify-content: center;
-                flex-flow: column nowrap;
+                flex-flow: row nowrap;
+                gap: 0.7em;
+                padding: 0 0.9rem;
+                height: 2.3rem;
                 overflow: hidden;
-                gap: 0.3em;
+                transition: background-color var(--transition);
+                @include cursor(pointer);
 
-                .title, ._meta {
-                    @include text-ellipsis();
+                .icon {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .svg {
+                        width: 1.6em;
+                        height: 1.6em;
+                        fill: var(--color-icon-primary);
+                    }
                 }
-                .title {
-                    font-weight: 600;
-                    letter-spacing: 0.03em;
+                .info {
+                    display: flex;
+                    justify-content: center;
+                    flex-flow: column nowrap;
+                    overflow: hidden;
+                    gap: 0.3em;
+
+                    .title, ._meta {
+                        @include text-ellipsis();
+                    }
+                    .title {
+                        font-weight: 600;
+                        letter-spacing: 0.03em;
+                    }
+                    ._meta {
+                        font-size: 0.8em;
+                        color: var(--color-text-description);
+                    }
                 }
-                ._meta {
-                    font-size: 0.8em;
-                    color: var(--color-text-description);
+
+                &:hover {
+                    background-color: var(--color-surface-overlay);
                 }
             }
+            .quickLinks {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 0.5em;
+                font-size: 0.9em;
+                padding: 1em 1em 1em 4em;
 
-            &:hover {
-                background-color: var(--color-surface-overlay);
+                .link {
+                    @include text-ellipsis();
+                    transition: padding-left var(--transition);
+
+                    &:hover {
+                        padding-left: 1em;
+                        color: var(--color-text-hint);
+                    }
+                }
             }
         }
     }
@@ -169,6 +192,37 @@
             background-color: var(--color-surface-overlay);
             border-radius: 0.5rem;
             width: calc(50% - 0.2rem);
+            flex-flow: column nowrap;
+            gap: 0.4em;
+            font-size: 0.5em;
+            overflow: hidden;
+            padding: 1.6em 0.7em 0.7em 0.7em;
+            justify-content: end;
+            @include cursor(pointer);
+            transition: transform var(--transition);
+
+            .value {
+                @include text-ellipsis();
+                font-size: 1em;
+                font-weight: 600;
+                letter-spacing: 0.02em;
+
+                .secondary {
+                    color: var(--color-text-description);
+                    font-size: 0.9em;
+                }
+            }
+            .title {
+                font-size: 0.66em;
+                line-height: 1.2;
+            }
+            &.contrast {
+                background-color: var(--color-contrast);
+                color: var(--color-contrast-text-primary);
+            }
+            &:hover {
+                transform: scale(1.02);
+            }
         }
     }
 
