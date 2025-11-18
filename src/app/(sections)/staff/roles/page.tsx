@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styles from './page.module.scss';
 import Input from '@/assets/ui-kit/input/input';
 import Button from '@/assets/ui-kit/button/button';
+import SearchPlug from '@/app/components/search-plug/search-plug';
 
 export default function Page() {
     return (
