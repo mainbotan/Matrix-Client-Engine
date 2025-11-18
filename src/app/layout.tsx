@@ -40,8 +40,8 @@ export default function RootLayout({
       </head>
       <body>
         <Providers>
-            <main className={styles.container}>
-              <NavBar />
+            <Header />
+            <main className={styles.container} role="main" aria-label="Основной контент">
               <div className={styles.content}>{children}</div>
             </main>
         </Providers>

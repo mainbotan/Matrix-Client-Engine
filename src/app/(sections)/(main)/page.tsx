@@ -11,7 +11,7 @@ export default function Page() {
         <>
             <div className={styles.container}>
                 <div className={styles.focus}>
-                    <div className={styles.title}>Приятной работы, <span className={styles.secondary}>Игорь</span></div>
+                    <div className={styles.title}>Приятной работы, <span className={styles.secondary}>Гондон</span></div>
                     <div className={styles.topics}>
                         <div className={styles.capture}>Часто используете</div>
                         <div className={styles.items}>
@@ -26,8 +26,8 @@ export default function Page() {
                                 </div>
                                 <div className={styles.topic}>
                                     <div className={styles.info}>
-                                        <div className={styles.name}>Клиенты</div>
-                                        <div className={styles._meta}>Смотрите текущее состояние клиентской базы.</div>
+                                        <div className={styles.name}>Источники трафика</div>
+                                        <div className={styles._meta}>Управляйте источниками трафика и анализируйте конверсию.</div>
                                     </div>
                                     <div className={styles.actions}>
                                         <div className={styles.action}><Arrow className={styles.svg} /></div>
@@ -35,8 +35,8 @@ export default function Page() {
                                 </div>
                                 <div className={styles.topic}>
                                     <div className={styles.info}>
-                                        <div className={styles.name}>Клиенты</div>
-                                        <div className={styles._meta}>Смотрите текущее состояние клиентской базы.</div>
+                                        <div className={styles.name}>Сделки</div>
+                                        <div className={styles._meta}>Распределение сделок по воронке продаж.</div>
                                     </div>
                                     <div className={styles.actions}>
                                         <div className={styles.action}><Arrow className={styles.svg} /></div>
@@ -44,8 +44,8 @@ export default function Page() {
                                 </div>
                                 <div className={styles.topic}>
                                     <div className={styles.info}>
-                                        <div className={styles.name}>Клиенты</div>
-                                        <div className={styles._meta}>Смотрите текущее состояние клиентской базы.</div>
+                                        <div className={styles.name}>Unit-анализ</div>
+                                        <div className={styles._meta}>Анализ прибыли со сделок по товарным позициям.</div>
                                         <div className={styles.link}>
                                             <span className={styles.text}>Что нового в версии 2.4x</span>
                                             <span className={styles.icon}><Arrow className={styles.svg} /></span>
@@ -57,8 +57,8 @@ export default function Page() {
                                 </div>
                                 <div className={styles.topic}>
                                     <div className={styles.info}>
-                                        <div className={styles.name}>Клиенты</div>
-                                        <div className={styles._meta}>Смотрите текущее состояние клиентской базы.</div>
+                                        <div className={styles.name}>Ежемесячный отчёт</div>
+                                        <div className={styles._meta}>Формирование ежемесячного отчёта за 2 секунды.</div>
                                     </div>
                                     <div className={styles.actions}>
                                         <div className={styles.action}><Arrow className={styles.svg} /></div>
@@ -66,8 +66,8 @@ export default function Page() {
                                 </div>
                                 <div className={styles.topic}>
                                     <div className={styles.info}>
-                                        <div className={styles.name}>Клиенты</div>
-                                        <div className={styles._meta}>Смотрите текущее состояние клиентской базы.</div>
+                                        <div className={styles.name}>Склад</div>
+                                        <div className={styles._meta}>Управление складом.</div>
                                     </div>
                                     <div className={styles.actions}>
                                         <div className={styles.action}><Arrow className={styles.svg} /></div>
@@ -75,8 +75,8 @@ export default function Page() {
                                 </div>
                                 <div className={styles.topic}>
                                     <div className={styles.info}>
-                                        <div className={styles.name}>Клиенты</div>
-                                        <div className={styles._meta}>Смотрите текущее состояние клиентской базы.</div>
+                                        <div className={styles.name}>Финансы</div>
+                                        <div className={styles._meta}>Планирование выплат на следующий месяц.</div>
                                     </div>
                                     <div className={styles.actions}>
                                         <div className={styles.action}><Arrow className={styles.svg} /></div>
