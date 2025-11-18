@@ -4,58 +4,23 @@ import MatrixFullLogo from '@/assets/matrix/matrix-full-logo/matrix-full-logo';
 import Arrow from '@/assets/ui-kit/icons/arrow';
 import Menu from '@/assets/ui-kit/icons/menu';
 import Button from '@/assets/ui-kit/button/button';
+import ThemeSwitcher from './theme-switcher/theme-switcher';
 
 export default function Footer() {
     return (
         <>
             <footer className={styles.container}>
                 <div className={styles.focus}>
-                    <section className={clsx(styles.box, styles.logo)}><MatrixFullLogo /></section>
-                    <section className={clsx(styles.box, styles.sections)}>
-                        <div className={styles.col}>
-                            <section className={clsx(styles.section, styles.capture)}>Нишевые решения</section>
-                            <section className={clsx(styles.section)}>Ебать</section>
-                            <section className={clsx(styles.section)}>Автосервисы</section>
-                            <section className={clsx(styles.section)}>Это</section>
-                            <section className={clsx(styles.section)}>ебаная залупа</section>
-                            <section className={clsx(styles.section)}>По секрету</section>
-                            <section className={clsx(styles.section)}>Вам</section>
-                            <section className={clsx(styles.section)}>Скажу</section>
-                        </div>
-                        <div className={styles.col}>
-                            <section className={clsx(styles.section, styles.capture)}>Нишевые решения</section>
-                            <section className={clsx(styles.section)}>Ебать</section>
-                            <section className={clsx(styles.section)}>Автосервисы</section>
-                            <section className={clsx(styles.section)}>Это</section>
-                            <section className={clsx(styles.section)}>ебаная залупа</section>
-                            <section className={clsx(styles.section)}>По секрету</section>
-                            <section className={clsx(styles.section)}>Вам</section>
-                            <section className={clsx(styles.section)}>Скажу</section>
-                        </div>
-                        <div className={styles.col}>
-                            <section className={clsx(styles.section, styles.capture)}>Нишевые решения</section>
-                            <section className={clsx(styles.section)}>Ебать</section>
-                            <section className={clsx(styles.section)}>Автосервисы</section>
-                            <section className={clsx(styles.section)}>Это</section>
-                            <section className={clsx(styles.section)}>ебаная залупа</section>
-                            <section className={clsx(styles.section)}>По секрету</section>
-                            <section className={clsx(styles.section)}>Вам</section>
-                            <section className={clsx(styles.section)}>Скажу</section>
-                        </div>
-                        <div className={styles.col}>
-                            <section className={clsx(styles.section, styles.capture)}>Нишевые решения</section>
-                            <section className={clsx(styles.section)}>Ебать</section>
-                            <section className={clsx(styles.section)}>Автосервисы</section>
-                            <section className={clsx(styles.section)}>Это</section>
-                            <section className={clsx(styles.section)}>ебаная залупа</section>
-                            <section className={clsx(styles.section)}>Автосервисы</section>
-                            <section className={clsx(styles.section)}>Это</section>
-                            <section className={clsx(styles.section)}>ебаная залупа</section>
-                            <section className={clsx(styles.section)}>По секрету</section>
-                            <section className={clsx(styles.section)}>Вам</section>
-                            <section className={clsx(styles.section)}>Скажу</section>
-                        </div>
+                    <section className={clsx(styles.logo)}>Matrix</section>
+                    <section className={styles.sections}>
+                        <section className={styles.section}><span className={styles.title}>Больше о Matrix</span></section>
+                        <section className={styles.section}><span className={styles.title}>Поддержка</span></section>
+                        <section className={styles.section}><span className={styles.title}>Блог</span></section>
                     </section>
+                    <section className={styles.status}>
+                        <span className={clsx(styles.span, styles.normal)}>Повреждений не обнаружено</span>
+                    </section>
+                    <section className={styles.switcher}><ThemeSwitcher /></section>
                 </div>
             </footer>
         </>
