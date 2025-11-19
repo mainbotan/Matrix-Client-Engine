@@ -101,6 +101,35 @@
             font-size: 0.9em;
             resize: vertical;
         }
+        .extraActions {
+            display: flex;
+            font-size: 0.9em;
+            gap: 1em;
+            flex-flow: row nowrap;
+            justify-content: end;
+
+            .secondary {
+                margin-left: 0.5em;
+                color: var(--color-blue);
+            }
+        }
+
+        &.row {
+            flex-direction: row;
+
+            .info {
+                display: flex;
+                width: 100%;
+                flex-flow: column nowrap;
+                justify-content: center;
+                width: 100%;
+                gap: 0.3em;
+            }
+            .input {
+                display: inline-flex;
+                width: 12rem;
+            }
+        }
     }
 
     .section.permissions {
@@ -212,7 +241,7 @@
         }
     }
 
-    .documents {
+    .section.documents {
         .upload {
             display: flex;
             min-height: 6em;
@@ -288,6 +317,43 @@
                 }
                 &:hover {
                     border-color: var(--color-stroke-secondary);
+                }
+            }
+        }
+    }
+
+    .section.dangerZone {
+        background-color: var(--color-red);
+        color: #eee;
+        gap: 2em;
+
+        .row {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 3em;
+
+            .info {
+                display: flex;
+                width: 100%;
+                flex-flow: column nowrap;
+                justify-content: center;
+                gap: 0.3em;
+                overflow: hidden;
+
+                .capture, .description {
+                    line-height: 1.2;
+                }
+                .description, .capture {
+                    color: #eee;
+                }
+            }
+            .actions {
+                display: inline-flex;
+                flex-flow: row nowrap;
+                gap: 1em;
+
+                .action {
+                    border: none;
                 }
             }
         }
