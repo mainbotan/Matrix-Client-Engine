@@ -9,7 +9,9 @@ import Close from '@/assets/ui-kit/icons/close';
 import Button from '@/assets/ui-kit/button/button';
 import Input from '@/assets/ui-kit/input/input';
 import Upload from '@/assets/ui-kit/icons/upload';
-import { Calendar } from './calendar/calendar';
+import { Calendar } from './load-block/calendar/calendar';
+import { LoadDynamics } from './load-block/load-dynamics/load-dynamics';
+import { LoadBlock } from './load-block/load-block';
 
 export default function Page() {
     const router = useRouter();
@@ -32,7 +34,7 @@ export default function Page() {
                 </div>
             </div>
             <div className={styles.content}>
-                <section><Calendar /></section>
+                <section><LoadBlock /></section>
                 <section className={styles.section}>
                     <div className={styles.capture}>Имя</div>
                     <Input variant='leader' fullWidth className={styles.input} placeholder='' value='Виталий Сергеевич' />

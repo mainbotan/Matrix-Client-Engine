@@ -34,8 +34,9 @@ export function Calendar() {
       <div className={styles.current}>
         {/* <div className={styles.plug}>Выберите день для просмотра рабочего времени сотрудника</div> */}
         <div className={styles.date}>19 ноября, 2025</div>
-        <div className={styles.hours}>8 <span className={styles.secondary}>часов</span></div>
+        <div className={clsx(styles.hours, styles.normal)}>8 <span className={styles.secondary}>часов</span></div>
         <div className={styles.deviation}>отклонение от нормы - <span className={clsx(styles.primary, styles.positive)}>+2 часа</span></div>
+        <div className={styles._meta}>Отмечено сотрудником</div>
       </div>
     </div>  
   );
