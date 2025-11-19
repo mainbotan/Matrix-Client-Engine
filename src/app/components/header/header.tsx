@@ -13,6 +13,7 @@ import Cloud from '@/assets/ui-kit/icons/cloud';
 import Input from '@/assets/ui-kit/input/input';
 import { usePathname } from 'next/navigation';
 import Bell from '@/assets/ui-kit/icons/bell';
+import { MatrixIcon } from '@/assets/matrix/matrix-icon/matrix-icon';
 
 export default function Header() {
     const pathname = usePathname();
@@ -27,7 +28,7 @@ export default function Header() {
         <>
             <header className={styles.container}>
                 <div className={styles.basic}>
-                    <Link href='/' className={styles.logo}>Matrix</Link>
+                    <Link href='/' className={styles.logo}><MatrixIcon /> <span>Matrix</span></Link>
                     <div className={styles.inter}>/</div>
                     <div className={styles.info}>
                         <Link href='/company' className={styles.company}>

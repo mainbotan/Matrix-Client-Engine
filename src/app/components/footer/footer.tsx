@@ -5,6 +5,7 @@ import Arrow from '@/assets/ui-kit/icons/arrow';
 import Menu from '@/assets/ui-kit/icons/menu';
 import Button from '@/assets/ui-kit/button/button';
 import ThemeSwitcher from './theme-switcher/theme-switcher';
+import Link from 'next/link';
 
 export default function Footer() {
     return (
@@ -16,6 +17,7 @@ export default function Footer() {
                         <section className={styles.section}><span className={styles.title}>Больше о Matrix</span></section>
                         <section className={styles.section}><span className={styles.title}>Поддержка</span></section>
                         <section className={styles.section}><span className={styles.title}>Блог</span></section>
+                        <Link href='/design' className={styles.section}><span className={styles.title}>Дизайн</span></Link>
                     </section>
                     <section className={styles.status}>
                         <span className={clsx(styles.span, styles.normal)}>Повреждений не обнаружено</span>

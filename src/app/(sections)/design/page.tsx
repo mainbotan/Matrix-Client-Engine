@@ -8,12 +8,20 @@ import Button from '@/assets/ui-kit/button/button';
 import Input from '@/assets/ui-kit/input/input';
 import Select from '@/assets/ui-kit/select/select';
 import Spinner from '@/assets/ui-kit/spinner/spinner';
+import { MatrixIcon } from '@/assets/matrix/matrix-icon/matrix-icon';
 
 export default function Page() {
     return (
         <>
         <div className={styles.container}>
             <div className={styles.focus}>
+                <div className={styles.logos}>
+                    <div className={styles.grid}>
+                        <div className={clsx(styles.item, styles.lg)}><MatrixIcon /></div>
+                        <div className={clsx(styles.item, styles.md)}><MatrixIcon /></div>
+                        <div className={clsx(styles.item, styles.sm)}><MatrixIcon /></div>
+                    </div>
+                </div>
                 <div className={styles.component}>
                     <div className={styles.grid}>
                         <div className={styles.section}>
