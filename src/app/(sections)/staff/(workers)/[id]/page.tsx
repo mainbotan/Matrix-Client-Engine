@@ -13,9 +13,12 @@ import { Calendar } from './load-block/calendar/calendar';
 import { LoadDynamics } from './load-block/load-dynamics/load-dynamics';
 import { LoadBlock } from './load-block/load-block';
 import Select from '@/assets/ui-kit/select/select';
+import { Message } from '@/app/components/message/message';
+import { useMessage } from '@/app/components/message/context';
 
 export default function Page() {
     const router = useRouter();
+    const { showMessage } = useMessage();
 
     const handleBackClick = () => {
         router.back();
@@ -181,7 +184,7 @@ export default function Page() {
                             </div>
                         </div>
                         <div className={styles.actions}>
-                            <Button variant='contrast' className={styles.action}>Уволить</Button>
+                            <Button variant='contrast' onClick={() => showMessage('Сотрудник уволен', 'default')} className={styles.action}>Уволить</Button>
                         </div>
                     </section>
                 </section>

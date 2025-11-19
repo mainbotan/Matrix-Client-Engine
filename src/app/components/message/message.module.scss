@@ -1,0 +1,72 @@
+@use '@/assets/styles/_mixins.scss' as *;
+
+@keyframes show-message {
+    0% {
+        opacity: 0;
+        top: -2rem;
+    }
+    100% {
+        opacity: 1;
+        top: 2rem;
+    }
+}
+
+.container {
+    position: fixed;
+    z-index: 1000;
+    width: 20em;
+    left: calc(50vw - 10em);
+    min-height: 3em;
+    background-color: var(--color-surface-glass-secondary);
+    border: 1px solid var(--color-stroke-secondary);
+    font-size: 0.38em;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    gap: 0em;
+    border-radius: 0.6em;
+    box-shadow: 0 0 0.2em var(--color-leader);
+    opacity: 0;
+    top: -2rem;
+    transition: top var(--transition), opacity var(--transition);
+    animation: show-message 0.2s forwards;
+
+    .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2.4rem;
+
+        .svg {
+            width: 40%;
+            height: 40%;
+            fill: var(--color-icon-primary);
+        }
+    }
+    .info {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        gap: 0.2em;
+        overflow: hidden;
+        padding: 0.5em 1em 0.5em 0;
+        
+        .title {
+            @include text-ellipsis();
+        }
+    }
+
+    // &.active {
+    //     top: 2em;
+    //     opacity: 1;
+    // }
+    &.success {
+        border-color: var(--color-blue);
+    }
+    &.error {
+        border-color: var(--color-red);
+    }
+    &.problem {
+        border-color: var(--color-orange);
+    }
+}
