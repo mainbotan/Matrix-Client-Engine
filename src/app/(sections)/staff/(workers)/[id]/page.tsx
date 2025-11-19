@@ -9,6 +9,7 @@ import Close from '@/assets/ui-kit/icons/close';
 import Button from '@/assets/ui-kit/button/button';
 import Input from '@/assets/ui-kit/input/input';
 import Upload from '@/assets/ui-kit/icons/upload';
+import { Calendar } from './calendar/calendar';
 
 export default function Page() {
     const router = useRouter();
@@ -31,6 +32,11 @@ export default function Page() {
                 </div>
             </div>
             <div className={styles.content}>
+                <section><Calendar /></section>
+                <section className={styles.section}>
+                    <div className={styles.capture}>Имя</div>
+                    <Input variant='leader' fullWidth className={styles.input} placeholder='' value='Виталий Сергеевич' />
+                </section>
                 <section className={styles.section}>
                     <div className={styles.capture}>Почта</div>
                     <div className={styles.description}>Сотрудник сможет авторизоваться по данной почте, предварительно её подтвердив.</div>
