@@ -3,19 +3,42 @@
 import Input from '@/assets/ui-kit/input/input';
 import styles from './page.module.scss';
 import clsx from 'clsx';
+import Link from 'next/link';
 
 export default function Page() {
     return (
         <>
         <div className={styles.container}>
+            <div className={styles.blocks}>
+                <div className={styles.block}>
+                    <div className={clsx(styles.value, styles.normal)}>2</div>
+                    <div className={styles.capture}>Сотрудника</div>
+                    <div className={styles._meta}>В штате</div>
+                </div>
+                <div className={styles.block}>
+                    <div className={clsx(styles.value, styles.positive)}>1</div>
+                    <div className={styles.capture}>Новый</div>
+                    <div className={styles._meta}>В этом месяце</div>
+                </div>
+                <div className={styles.block}>
+                    <div className={clsx(styles.value, styles.positive)}>0</div>
+                    <div className={styles.capture}>Увольнений</div>
+                    <div className={styles._meta}>В этом месяце</div>
+                </div>
+                <div className={styles.block}>
+                    <div className={styles.value}>2</div>
+                    <div className={styles.capture}>Роли</div>
+                    <div className={styles._meta}>Всего</div>
+                </div>
+            </div>
             <div className={styles.search}>
                 <Input className={styles.input} variant='default' placeholder='Имя, ID...' />
             </div>
             <div className={styles.cards}>
-                <div className={styles.card}>
+                <Link href='/staff/0x12391-kfna-32323' className={styles.card}>
                     <div className={styles.tags}>
                         <div className={clsx(styles.tag, styles.role)}>Менеджер</div>
-                        <div className={clsx(styles.tag, styles.id)}>1923-1233-2031</div>
+                        <div className={clsx(styles.tag, styles.id)}>0x12391-kfna-32323</div>
                     </div>
                     <div className={styles.info}>
                         <div className={styles.name}>Виталий Сергеевич</div>
@@ -35,11 +58,11 @@ export default function Page() {
                             <div className={styles.title}>за неделю</div>
                         </div>
                     </div>
-                </div>
-                <div className={styles.card}>
+                </Link>
+                <Link href='/staff/0x12391-kfna-32323' className={styles.card}>
                     <div className={styles.tags}>
-                        <div className={clsx(styles.tag, styles.role)}>Мастер</div>
-                        <div className={clsx(styles.tag, styles.id)}>1923-1233-2031</div>
+                        <div className={clsx(styles.tag, styles.role)}>Менеджер</div>
+                        <div className={clsx(styles.tag, styles.id)}>0x12391-kfna-32323</div>
                     </div>
                     <div className={styles.info}>
                         <div className={styles.name}>Виталий Сергеевич</div>
@@ -59,7 +82,7 @@ export default function Page() {
                             <div className={styles.title}>за неделю</div>
                         </div>
                     </div>
-                </div>
+                </Link>
             </div>
         </div>
         </>
