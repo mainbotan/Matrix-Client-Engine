@@ -16,10 +16,18 @@
 
         .logo {
             display: inline-flex;
-            align-items: center;
             font-size: 0.6em;
             font-weight: 600;
             gap: 0.3em;
+            flex-flow: row nowrap;
+            white-space: nowrap;
+            align-items: center;
+
+            .img {
+                width: 0.9em;
+                height: 0.9em;
+                border-radius: 0.2em;
+            }
         }
         .inter {
             display: inline-flex;

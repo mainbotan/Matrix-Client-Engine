@@ -28,7 +28,7 @@ export default function Header() {
         <>
             <header className={styles.container}>
                 <div className={styles.basic}>
-                    <Link href='/' className={styles.logo}><MatrixIcon /> <span>Matrix</span></Link>
+                    <Link href='/' className={styles.logo}><img src='/images/logo/base.png' className={styles.img} /> <span>Matrix</span></Link>
                     <div className={styles.inter}>/</div>
                     <div className={styles.info}>
                         <Link href='/company' className={styles.company}>

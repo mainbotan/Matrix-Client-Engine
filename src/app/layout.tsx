@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="ru" className={styles.layout}>
       <head>
-        <link rel="icon" href="/images/matrix/matrix-sm-icon-extra-rounded.png" />
+        <link rel="icon" href="/images/logo/base.png" />
         <meta name="theme-color" content="#101010" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
