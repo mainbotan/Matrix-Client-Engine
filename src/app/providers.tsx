@@ -4,7 +4,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { useState } from 'react';
 import ScrollToTop from './ScrollToTop';
-import { MessageProvider } from './components/message/context';
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(
@@ -22,9 +21,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <MessageProvider>
         {children}
-      </MessageProvider>
       <ScrollToTop />
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>

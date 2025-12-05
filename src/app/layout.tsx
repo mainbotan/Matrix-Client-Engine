@@ -4,8 +4,6 @@ import '@/assets/styles/main.scss';
 import styles from './layout.module.scss';
 import Providers from "./providers";
 import ScrollToTop from "./ScrollToTop";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
 import Head from "next/head";
 
 export const metadata: Metadata = {
@@ -55,11 +53,9 @@ export default function RootLayout({
       </head>
       <body>
         <Providers>
-            <Header />
             <main className={styles.container} role="main" aria-label="Основной контент">
               <div className={styles.content}>{children}</div>
             </main>
-            <Footer />
         </Providers>
       </body>
     </html>
