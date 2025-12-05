@@ -5,16 +5,18 @@
     --color-brand-pale: var(--color-brand);
     --color-leader: #000000;
     --color-contrast: #ebebeb;
-    --color-header: #0a0a0a;
+    --color-header: #1e1e1e;
+    --color-accent: rgb(197, 26, 26);
+    --color-accent-glass: rgba(197, 26, 26, 0.857);
     
     // ==================== AIRY SURFACES ====================
-    --color-surface-primary: #090909;
+    --color-surface-primary: #141414;
     --color-surface-secondary: #111111;
-    --color-surface-tertiary: rgb(32, 32, 32);
+    --color-surface-tertiary: rgb(84, 84, 84);
     --color-surface-elevated: #1c1b1b;
     --color-surface-overlay: rgba(18, 17, 17, 0.95);
-    --color-surface-glass: rgba(14, 13, 13, 0.569);
-    --color-surface-glass-secondary: rgba(14, 13, 13, 0.939);
+    --color-surface-glass: rgba(15, 15, 15, 0.801);
+    --color-surface-glass-secondary: rgba(23, 23, 23, 0.775);
 
     // ==================== CALM TEXT ====================
     --color-text-primary: #ededed;
@@ -29,7 +31,7 @@
     --color-contrast-text-ghost: #cbd5e1;
 
     // ==================== SUBTLE STROKES ====================
-    --color-stroke-primary: #131313;
+    --color-stroke-primary: #323232;
     --color-stroke-secondary: #222222;
     --color-stroke-tertiary: #696969;
     --color-stroke-focus: var(--color-brand-light);
@@ -47,6 +49,7 @@
 
     // ==================== ICONS ====================
     --color-icon-primary: #adadad;
+    --color-icon-active: var(--color-accent);
     
     // ==================== EXTENDED PALETTE ====================
     --color-red: #f63939;

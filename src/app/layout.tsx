@@ -5,6 +5,9 @@ import styles from './layout.module.scss';
 import Providers from "./providers";
 import ScrollToTop from "./ScrollToTop";
 import Head from "next/head";
+import { TopBar } from "./components/top-bar/top-bar";
+import { RightBar } from "./components/right-bar/right-bar";
+import { LeftBar } from "./components/left-bar/left-bar";
 
 export const metadata: Metadata = {
   title: "Matrix One",
@@ -53,6 +56,9 @@ export default function RootLayout({
       </head>
       <body>
         <Providers>
+            <TopBar />
+            <LeftBar />
+            <RightBar />
             <main className={styles.container} role="main" aria-label="Основной контент">
               <div className={styles.content}>{children}</div>
             </main>
