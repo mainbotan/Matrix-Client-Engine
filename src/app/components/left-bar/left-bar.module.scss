@@ -16,7 +16,7 @@
     left: -2rem;
     top: 0;
     height: 100vh;
-    width: 2.5rem;
+    width: 10rem;
     background-color: var(--color-surface-primary);
     padding-top: 2rem;
     overflow: hidden;
@@ -33,36 +33,7 @@
         backdrop-filter: blur(10px);
         z-index: 20;
         position: relative;
-        // padding: 0.6em 0;
 
-        .box {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-flow: column nowrap;
-            height: 2rem;
-            @include cursor(pointer);
-            gap: 0.15em;
-
-            .svg {
-                width: 0.65em;
-                height: 0.65em;
-                fill: var(--color-icon-primary);
-                transition: fill var(--transition);
-            }
-            .img {
-                width: 2.3rem;
-                border-radius: 0em;
-            }
-            .capture {
-                font-size: 0.27em;
-            }
-            &:hover {
-                .svg {
-                    fill: var(--color-icon-active);
-                }
-            }
-        }
     }
     .el {
         position: absolute;
@@ -74,5 +45,85 @@
         background: #7384EC;
         background: linear-gradient(180deg, var(--color-accent-glass), transparent);
         display: none;
+    }
+}
+
+.container.compact {
+    width: 2rem;
+
+    .sections {
+        display: flex;
+        flex-flow: column nowrap;
+
+        .section {
+            display: inline-flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            gap: 0em;
+            width: 2rem;
+            height: 2rem;
+            transition: background-color var(--transition);
+            @include cursor(pointer);
+
+            .svg {
+                width: 0.7em;
+                height: 0.7em;
+                fill: var(--color-icon-primary);
+                transition: fill var(--transition);
+            }
+            .text {
+                font-size: 0.25em;
+                display: none;
+            }
+            &:hover {
+                background-color: var(--color-surface-glass);
+
+                .svg {
+                    fill: var(--color-icon-active);
+                }
+            }
+        }
+    }
+}
+
+// Full view
+.container.full .grid {
+    .sections {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 0.4rem 0.6rem;
+        font-size: 0.6em;
+        overflow: hidden;
+
+        .section {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 0.4em;
+            height: 1.9em;
+            overflow: hidden;
+
+            .icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                .svg {
+                    width: 1em;
+                    height: 1em;
+                    fill: var(--color-icon-primary);
+                }
+            }
+            .text {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                font-size: 0.62em;
+
+                .capture {
+                    @include text-ellipsis();
+                }
+            }
+        }
     }
 }

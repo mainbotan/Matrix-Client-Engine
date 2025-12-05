@@ -8,6 +8,7 @@ import Head from "next/head";
 import { TopBar } from "./components/top-bar/top-bar";
 import { RightBar } from "./components/right-bar/right-bar";
 import { LeftBar } from "./components/left-bar/left-bar";
+import { BottomBar } from "./components/bottom-bar/bottom-bar";
 
 export const metadata: Metadata = {
   title: "Matrix One",
@@ -59,6 +60,7 @@ export default function RootLayout({
             <TopBar />
             <LeftBar />
             <RightBar />
+            <BottomBar />
             <main className={styles.container} role="main" aria-label="Основной контент">
               <div className={styles.content}>{children}</div>
             </main>

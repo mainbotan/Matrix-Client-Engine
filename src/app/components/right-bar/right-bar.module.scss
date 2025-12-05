@@ -2,18 +2,16 @@
 
 @keyframes show-bar {
     0% {
-        right: -2rem;
         opacity: 0;
     }
     100% {
-        right: 0;
         opacity: 1;
     }
 }
 .container {
     position: fixed;
     z-index: 90;
-    right: -2rem;
+    right: 0rem;
     top: 0;
     height: 100vh;
     width: 2rem;

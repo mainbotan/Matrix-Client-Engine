@@ -1,0 +1,37 @@
+@use '@/assets/styles/_mixins.scss' as *;
+
+.container {
+    position: fixed;
+    z-index: 90;
+    left: 0rem;
+    bottom: 0;
+    height: 1rem;
+    width: 100%;
+    background-color: var(--color-leader);
+    overflow: hidden;
+    display: flex;
+    border-top: 1px solid var(--color-stroke-secondary);
+    
+    .grid {
+        display: flex;
+        flex: 1;
+        flex-flow: row nowrap;
+        padding: 0 0.9em;
+        font-size: 0.32em;
+        color: var(--color-text-secondary);
+        gap: 1em;
+
+        .box {
+            display: flex;
+            padding: 0 1em;
+            align-items: center;
+            justify-content: center;
+        }
+        .box.version {
+            background-color: var(--color-brand);
+            color: #fff;
+            border-top-left-radius: 0.3em;
+            border-top-right-radius: 0.3em;
+        }
+    }
+}
