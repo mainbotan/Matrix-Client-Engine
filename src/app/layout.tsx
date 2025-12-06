@@ -7,6 +7,7 @@ import { TopBar } from "./components/top-bar/top-bar";
 import { RightBar } from "./components/right-bar/right-bar";
 import { LeftBar } from "./components/left-bar/left-bar";
 import { BottomBar } from "./components/bottom-bar/bottom-bar";
+import { ThemeInitializer } from './theme-initializer';
 
 export const metadata: Metadata = {
   title: "Matrix One",
@@ -23,13 +24,39 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+// Инлайн скрипт для предотвращения мерцания
+const themeScript = `
+  (function() {
+    try {
+      // Устанавливаем тему ДО рендеринга страницы
+      var savedTheme = localStorage.getItem('theme');
+      var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      var theme = savedTheme || systemTheme;
+      
+      // Применяем сразу, чтобы не было мерцания
+      document.documentElement.setAttribute('data-theme', theme);
+      document.body.setAttribute('data-theme', theme);
+      
+      // Обновляем meta theme-color
+      var metaThemeColor = document.querySelector('meta[name="theme-color"]');
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', theme === 'dark' ? '#101010' : '#ffffff');
+      }
+    } catch (e) {
+      // При ошибке ставим темную тему по умолчанию
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.body.setAttribute('data-theme', 'dark');
+    }
+  })();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className={styles.layout}>
+    <html lang="ru" className={styles.layout} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/images/logo/base.png" />
         <meta name="theme-color" content="#101010" />
@@ -38,41 +65,11 @@ export default function RootLayout({
         <meta name="msapplication-navbutton-color" content="#101010" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         
-        {/* Скрипт для предотвращения мерцания с предпочтением светлой темы */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var savedTheme = localStorage.getItem('theme');
-                  // Светлая тема по умолчанию, если нет сохраненной темы
-                  var theme = savedTheme || 'light';
-                  
-                  // Применяем тему к documentElement и body
-                  document.documentElement.setAttribute('data-theme', theme);
-                  document.body.setAttribute('data-theme', theme);
-                  
-                  // Обновляем meta theme-color динамически
-                  var metaThemeColor = document.querySelector('meta[name="theme-color"]');
-                  if (metaThemeColor) {
-                    // Здесь можно задать разные цвета для разных тем
-                    if (theme === 'dark') {
-                      metaThemeColor.setAttribute('content', '#101010');
-                    } else if (theme === 'light') {
-                      metaThemeColor.setAttribute('content', '#ffffff');
-                    }
-                  }
-                } catch (e) {
-                  // Если произошла ошибка, устанавливаем светлую тему
-                  document.documentElement.setAttribute('data-theme', 'light');
-                  document.body.setAttribute('data-theme', 'light');
-                }
-              })();
-            `,
-          }}
-        />
+        {/* Критически важный скрипт - устанавливает тему ДО рендеринга */}
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body>
+      <body suppressHydrationWarning>
+        <ThemeInitializer />
         <Providers>
             <TopBar />
             <LeftBar />

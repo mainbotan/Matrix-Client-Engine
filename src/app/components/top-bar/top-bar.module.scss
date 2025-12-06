@@ -51,7 +51,7 @@
     font-weight: 600;
     letter-spacing: 0.02em;
     font-family: 'SF Mono Latin', sans-serif;
-    padding-right: 1em;
+    padding-right: 0em;
     padding-left: 0.2em;
 
     .icon {
@@ -152,8 +152,95 @@
     }
 }
 
+// sections 
+.sections {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    font-size: 0.64em;
+    color: var(--color-text-secondary);
+    gap: 1.4em;
+
+    .section {
+        display: inline-flex;
+        align-items: center;
+        @include cursor(pointer);
+        transition: color var(--transition);
+        white-space: nowrap;
+
+        &:hover, &.active {
+            color: var(--color-accent);
+        }
+    }
+    @media (max-width: 720px) {
+        display: none;
+    }
+}
+
 // Actions
 .actions {
     display: flex;
     flex: 1;
+    font-size: 0.55em;
+    flex-flow: row nowrap;
+    gap: 0.4em;
+    justify-content: end;
+    align-items: center;
+
+    .action.invite {
+        border-radius: 2em;
+        height: 2.9em;
+        flex-flow: row nowrap;
+        gap: 0.5em;
+        font-weight: 600;
+
+        .svg {
+            width: 1em;
+            height: 1em;
+            fill: var(--color-icon-primary);
+        }
+        @media (max-width: 720px) {
+            display: none;
+        }
+    }
+}
+
+// Search
+.search {
+    position: fixed;
+    height: 1.6rem;
+    top: 0.2rem;
+    font-size: 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    left: calc(50% - 15vw);
+    border: 1px solid var(--color-stroke-secondary);
+    border-radius: 0.4em;
+    background-color: var(--color-surface-secondary);
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0em;
+    overflow: hidden;
+    
+    .shortcut {
+        display: inline-flex;
+        font-weight: 600;
+        color: var(--color-text-description);
+        border: 1px solid var(--color-stroke-secondary);
+        border-radius: 0.3em;
+        padding: 0.3em;
+        margin: 0 0 0 0.5em;
+        background-color: var(--color-surface-secondary);
+    }
+    .input {
+        height: 1.6rem;
+        width: 100%;
+        border: none;
+        background-color: none;
+    }
+
+    @media (max-width: 720px) {
+        display: none;
+    }
 }

@@ -1,27 +1,38 @@
+// main.scss
 @use 'base/reset';
 @use 'base/typography' as *;
 @use 'base/themes/dark' as dark;
 @use 'base/themes/light' as light;
 
+// Важно: :root без темы - только общие переменные
 :root {
   @include font-styles;
-  @include light.theme;
 
   --transition: 0.3s ease;
   --pc-min-width: 1420px;
   --mobile-max-width: 720px;
+  
+  // Транзиции для темы - добавляем только для данных атрибутов
+  transition: background-color var(--transition), 
+              color var(--transition);
 }
 
 html {
   font-size: 62.5%;
+  
+  // Изначально скрываем контент до установки темы
+  &:not([data-theme]) {
+    visibility: hidden;
+  }
+  
+  &[data-theme] {
+    visibility: visible;
+  }
 }
 
 html, body {
   font-family: var(--font-sans);
   font-weight: 400;
-  background: var(--color-leader);
-  color: var(--color-text-primary);
-  transition: background-color var(--transition), color var(--transition);
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -29,16 +40,39 @@ html, body {
   line-height: 1;
   font-size: 1.6rem;
   position: relative;
+  
+  // Убираем переходы для основных свойств, оставляем только для темы
+  transition-property: background-color, color;
+  transition-duration: var(--transition);
+  transition-timing-function: ease;
 
   @media (max-width: 720px) {
     font-size: 1.6rem;
   }
 }
-[data-theme="light"] {
+
+// Темная тема по умолчанию (на время загрузки)
+// Это временное состояние, пока скрипт не выполнится
+html:not([data-theme]) {
+  @include dark.theme;
+}
+
+// После выполнения скрипта применяется правильная тема
+html[data-theme="light"] {
   @include light.theme;
 }
-[data-theme="dark"] {
+
+html[data-theme="dark"] {
   @include dark.theme;
+}
+
+// Убираем переходы во время загрузки, чтобы избежать мерцания
+html:not([data-theme]) * {
+  transition: none !important;
+}
+html, body {
+  background-color: var(--color-leader);
+  color: var(--color-text-primary);
 }
 @media (max-width: 720px) {
   html, body {
@@ -51,6 +85,7 @@ html, body {
     display: none;             /* Chrome, Safari, Opera */
   }
 }
+
 .container {
   display: flex;
   justify-content: center;

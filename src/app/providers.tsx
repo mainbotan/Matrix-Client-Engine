@@ -1,12 +1,14 @@
+// app/providers.tsx
 'use client';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ScrollToTop from './ScrollToTop';
 import { ContextMenuProvider } from '@/lib/context-menu/ContextMenuProvider';
 
 export default function Providers({ children }: { children: React.ReactNode }) {
+  const [isMounted, setIsMounted] = useState(false);
   const [queryClient] = useState(
     () =>
       new QueryClient({
@@ -20,12 +22,21 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       })
   );
 
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // Не рендерим ничего пока не установится тема
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <QueryClientProvider client={queryClient}>
-        <ContextMenuProvider>
+      <ContextMenuProvider>
         {children}
-        </ContextMenuProvider>
-        <ScrollToTop />
+      </ContextMenuProvider>
+      <ScrollToTop />
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
