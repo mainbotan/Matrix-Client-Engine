@@ -2,15 +2,11 @@
 
 .container {
     display: flex;
-    width: 100%;
-    flex-flow: column nowrap;
-    gap: 0 0;
-    min-height: 100vh;
-    position: relative;
-
-    .content {
-        display: flex;
-        width: 100%;
-        overflow: hidden;
-    }
+    flex: 1;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-left: 3rem;
+    background-color: var(--color-leader);
+    border-radius: 0.4rem;
+    min-height: calc(100vh - 1rem);
 }

@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    .focus {
+        max-width: 50%;
+        max-height: 50%;
+        display: flex;
+        flex-flow: column nowrap;
+        font-size: 1em;
+        gap: 0.5em;
+    }
+}

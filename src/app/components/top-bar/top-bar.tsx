@@ -10,11 +10,11 @@ export function TopBar() {
                     <img src='/images/logo/base.png' className={styles.icon} />
                     <span className={styles.name}>Matrix</span>
                 </Link>
-                <section className={styles.workspace}>
+                {/* <section className={styles.workspace}>
                     <span className={styles.icon}><div className={styles.label}>E</div></span>
                     <span className={styles.name}>Easy Service</span>
                     <span className={styles.action}><Arrow className={styles.svg} /></span>
-                </section>
+                </section> */}
                 <section className={styles.actions}></section>
                 <section className={styles.account}>
                     <span className={styles.name}>Serafim</span>

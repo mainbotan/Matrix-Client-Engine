@@ -7,20 +7,21 @@ import Tools from '@/assets/ui-kit/icons/tools';
 import Themization from '@/assets/ui-kit/icons/themization';
 import Account from '@/assets/ui-kit/icons/account';
 import Settings from '@/assets/ui-kit/icons/settings';
+import Link from 'next/link';
 
 export function RightBar() {
     return (
         <div className={styles.container}>
             <div className={styles.grid}>
-                <section className={styles.box}>
+                <Link href='/account' className={styles.box}>
                     <Account className={styles.svg} />
-                </section>
-                <section className={styles.box}>
+                </Link>
+                <Link href='/settings' className={styles.box}>
                     <Settings className={styles.svg} />
-                </section>
-                <section className={styles.box}>
+                </Link>
+                <Link href='/settings/environment' className={styles.box}>
                     <Themization className={styles.svg} />
-                </section>
+                </Link>
             </div>
         </div>
     )

@@ -62,7 +62,7 @@ export default function RootLayout({
             <RightBar />
             <BottomBar />
             <main className={styles.container} role="main" aria-label="Основной контент">
-              <div className={styles.content}>{children}</div>
+              {children}
             </main>
         </Providers>
       </body>

@@ -1,0 +1,24 @@
+@use '@/assets/styles/_mixins.scss' as *;
+
+@keyframes show-container {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.container {
+    display: flex;
+    flex: 1;
+    flex-flow: row nowrap;
+    gap: 1em;
+    opacity: 0;
+    animation: show-container 0.4s forwards;
+
+    .panel {
+        display: flex;
+        width: 10rem;
+        border-right: 1px solid var(--color-stroke-primary);
+    }
+}
