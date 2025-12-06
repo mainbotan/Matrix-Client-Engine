@@ -37,22 +37,6 @@ export function LeftBar() {
                         <span className={styles.icon}></span>
                         <span className={styles.marker} />
                     </Link>
-                    <Link href='/organization/company-slug' onContextMenu={(e) => onContextMenu(e, '')} className={clsx(styles.item)}>
-                        <span className={styles.icon}></span>
-                        <span className={styles.marker} />
-                    </Link>
-                    <Link href='/organization/company-slug' onContextMenu={(e) => onContextMenu(e, '')} className={clsx(styles.item)}>
-                        <span className={styles.icon}></span>
-                        <span className={styles.marker} />
-                    </Link>
-                    <Link href='/organization/company-slug' onContextMenu={(e) => onContextMenu(e, '')} className={clsx(styles.item)}>
-                        <span className={styles.icon}></span>
-                        <span className={styles.marker} />
-                    </Link>
-                    <Link href='/organization/company-slug' onContextMenu={(e) => onContextMenu(e, '')} className={clsx(styles.item)}>
-                        <span className={styles.icon}></span>
-                        <span className={styles.marker} />
-                    </Link>
                     <section className={styles.add}>
                         <Plus className={styles.svg} />
                     </section>

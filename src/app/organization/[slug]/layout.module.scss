@@ -19,6 +19,95 @@
     .panel {
         display: flex;
         width: 10rem;
+        flex-flow: column nowrap;
         border-right: 1px solid var(--color-stroke-primary);
+    }
+    .content {
+        display: flex;
+        flex: 1;
+    }
+    .notes { 
+        display: flex;
+        width: 9rem;
+        background-color: var(--color-surface-secondary);
+        border-left: 1px solid var(--color-stroke-primary);
+    }
+}
+
+// Panel
+.panel {
+    .label {
+        height: 5rem;
+        border-bottom: 1px solid var(--color-stroke-secondary);
+        background-color: var(--color-surface-primary);
+    }
+    .info {
+        font-size: 0.5em;
+        padding: 0.6em 0.6em;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0.2em;
+        border-bottom: 1px solid var(--color-stroke-secondary);
+
+        .name {
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        .description {
+            font-size: 0.7em;
+            color: var(--color-text-description);
+        }
+    }
+    .sections {
+        display: flex;
+        flex-flow: column nowrap;
+        font-size: 0.37em;
+
+        .section {
+            display: flex;
+            flex-flow: row nowrap;
+            height: 3.2em;
+            gap: 0.7em;
+            padding: 0.3em 0.9em;
+            // border-top: 1px solid var(--color-stroke-primary);
+            @include cursor(pointer);
+            transition: background-color var(--transition);
+
+            .icon {
+                display: inline-flex;
+                align-items: center;
+
+                .svg {
+                    width: 1.4em;
+                    height: 1.4em;
+                    fill: var(--color-icon-primary);
+                }
+            }
+            .name {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+            }
+            &:hover {
+                background-color: var(--color-surface-primary);
+            }
+        }
+    }
+    .widgets {
+        display: flex;
+        flex-flow: row wrap;
+        font-size: 0.4em;
+        gap: 0.8em;
+        padding: 1em 1em;
+
+        .widget {
+            display: flex;
+            width: calc(50% - 0.4em);
+            height: 6em;
+            border: 1px solid var(--color-stroke-secondary);
+            border-radius: 0.4em;
+            background: linear-gradient(135deg, var(--color-surface-primary), var(--color-surface-secondary));
+            @include cursor(pointer);
+        }
     }
 }
