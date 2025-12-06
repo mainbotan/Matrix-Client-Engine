@@ -9,4 +9,9 @@
     background-color: var(--color-leader);
     border-radius: 0.4rem;
     min-height: calc(100vh - 1rem);
+
+    @media (max-width: 720px) {
+        margin-right: 0rem;
+        font-size: 0.8em;
+    }
 }

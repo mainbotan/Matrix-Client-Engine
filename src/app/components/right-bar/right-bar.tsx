@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './right-bar.module.scss';
-import { sectionsConfig } from './sections.map';
+import { sectionsConfig } from './sections.config';
 import { isSectionActive } from '@/assets/utils/sections';
 
 export function RightBar() {

@@ -16,10 +16,10 @@ export function TopBar() {
                     <span className={styles.action}><Arrow className={styles.svg} /></span>
                 </section> */}
                 <section className={styles.actions}></section>
-                <section className={styles.account}>
+                <Link href='/account' className={styles.account}>
                     <span className={styles.name}>Serafim</span>
                     <span className={styles.icon}><div className={styles.label}>S</div></span>
-                </section>
+                </Link>
             </div>
             <div className={styles.el} />
         </div>

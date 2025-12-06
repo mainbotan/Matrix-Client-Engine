@@ -31,8 +31,11 @@ html, body {
   position: relative;
 
   @media (max-width: 720px) {
-    font-size: 1.4em;
+    font-size: 1.6rem;
   }
+}
+[data-theme="light"] {
+  @include light.theme;
 }
 [data-theme="dark"] {
   @include dark.theme;
