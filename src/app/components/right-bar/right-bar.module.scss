@@ -50,6 +50,11 @@
                     fill: var(--color-text-primary);
                 }
             }
+            &.active {
+                .svg {
+                    fill: var(--color-text-primary);
+                }
+            }
         }
     }
 }

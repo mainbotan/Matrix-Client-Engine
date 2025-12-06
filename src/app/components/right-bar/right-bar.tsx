@@ -1,46 +1,41 @@
 'use client';
 
-import Team from '@/assets/ui-kit/icons/team';
-import styles from './right-bar.module.scss';
-import Eye from '@/assets/ui-kit/icons/eye';
-import Puzzle from '@/assets/ui-kit/icons/puzzle';
-import Tools from '@/assets/ui-kit/icons/tools';
-import Themization from '@/assets/ui-kit/icons/themization';
-import Account from '@/assets/ui-kit/icons/account';
-import Settings from '@/assets/ui-kit/icons/settings';
 import Link from 'next/link';
-import { useContextMenu, useSimpleContextMenu } from '@/lib/context-menu/useContextMenu';
-import Cloud from '@/assets/ui-kit/icons/cloud';
-import Copy from '@/assets/ui-kit/icons/copy';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
+import styles from './right-bar.module.scss';
+import { sectionsConfig } from './sections.map';
+import { isSectionActive } from '@/assets/utils/sections';
 
 export function RightBar() {
+  const pathname = usePathname();
 
-    const actions = [
-        {
-            id: 'copy',
-            label: 'Настройки',
-            icon: <Tools />,
-            handler: () => {
-                window.location.href = '/settings';
-            },
-        }
-    ];
-    const { onContextMenu } = useSimpleContextMenu(actions);
+  return (
+    <div className={styles.container}>
+      <div className={styles.grid}>
+        {sectionsConfig.map((section) => {
+          const isActive = isSectionActive(pathname, section);
+          const IconComponent = section.icon;
+          
+          // Безопасное создание className
+          let className = styles.box;
+          if (isActive && styles.active) {
+            className += ` ${styles.active}`;
+          }
 
-    return (
-        <div className={styles.container} onContextMenu={(e) => onContextMenu(e, '')}>
-            <div className={styles.grid}>
-                <Link href='/account' className={styles.box}>
-                    <Account className={styles.svg} />
-                </Link>
-                <Link href='/settings' className={styles.box}>
-                    <Settings className={styles.svg} />
-                </Link>
-                <Link href='/settings/environment' className={styles.box}>
-                    <Themization className={styles.svg} />
-                </Link>
-            </div>
-        </div>
-    )
+          return (
+            <Link
+              key={section.slug || section.href}
+              href={section.href}
+              className={className}
+              title={section.slug ? `Перейти к ${section.slug}` : ''}
+            >
+              <div className={styles.iconWrapper}>
+                <IconComponent className={styles.svg} />
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
