@@ -18,7 +18,7 @@
     padding-top: 2rem;
     overflow: hidden;
     display: flex;
-    animation: show-bar 0.2s forwards;
+    opacity: 1;
     border-right: 1px solid var(--color-stroke-primary);
     
     .grid {

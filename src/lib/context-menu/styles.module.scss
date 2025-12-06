@@ -1,0 +1,188 @@
+// Используем CSS custom properties для темы
+.container {
+  --context-menu-bg: var(--color-surface-overlay);
+  --context-menu-border: var(--color-stroke-primary);
+  --context-menu-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  --context-menu-radius: 6px;
+  
+  --item-text: var(--color-text-primary);
+  --item-text-secondary: var(--color-text-secondary);
+  --item-hover-bg: var(--color-surface-tertiary);
+  --item-disabled-text: var(--color-text-description);
+  --item-disabled-bg: transparent;
+  
+  --danger-text: var(--color-accent);
+  --danger-hover-bg: rgba(197, 26, 26, 0.1);
+  
+  --shortcut-text: var(--color-text-description);
+  --divider-color: var(--color-stroke-secondary);
+}
+
+.container {
+  position: fixed;
+  z-index: 9999;
+  animation: fadeIn 0.15s ease-out;
+  
+  &.isVisible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu {
+  min-width: 180px;
+  max-width: 280px;
+  background: var(--context-menu-bg);
+  border: 1px solid var(--context-menu-border);
+  border-radius: var(--context-menu-radius);
+  box-shadow: var(--context-menu-shadow);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  animation: slideIn 0.15s ease-out;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 14px;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  color: var(--item-text);
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+  text-align: left;
+  line-height: 1.4;
+  
+  &:hover:not(.disabled) {
+    background: var(--item-hover-bg);
+  }
+  
+  &:active:not(.disabled) {
+    background: var(--color-surface-secondary);
+    transition-duration: 0.05s;
+  }
+  
+  &.disabled {
+    color: var(--item-disabled-text);
+    background: var(--item-disabled-bg);
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  &.danger {
+    color: var(--danger-text);
+    
+    &:hover:not(.disabled) {
+      background: var(--danger-hover-bg);
+    }
+  }
+  
+  // Разделитель между элементами (кроме последнего)
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--divider-color);
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 19px;
+  height: 19px;
+  font-size: 14px;
+  color: var(--color-icon-primary);
+  
+  .danger & {
+    color: var(--danger-text);
+  }
+  
+  .disabled & {
+    color: var(--item-disabled-text);
+  }
+}
+
+.label {
+  flex: 1;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shortcut {
+  font-size: 11px;
+  color: var(--shortcut-text);
+  opacity: 0.8;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-left: auto;
+  padding-left: 12px;
+  
+  .disabled & {
+    opacity: 0.5;
+  }
+}
+
+// Анимации
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+// Для контейнеров, которые поддерживают контекстное меню
+.contextMenuTrigger {
+  cursor: context-menu;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.02);
+  }
+  
+  &:active {
+    background: rgba(255, 255, 255, 0.04);
+  }
+}
+
+// Минималистичный вариант (если нужен)
+.minimal {
+  .menu {
+    min-width: 140px;
+    border: 1px solid var(--color-stroke-secondary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .item {
+    padding: 8px 12px;
+    font-size: 12px;
+    gap: 8px;
+  }
+  
+  .icon {
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+  }
+  
+  .shortcut {
+    font-size: 10px;
+  }
+}

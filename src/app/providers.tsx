@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { useState } from 'react';
 import ScrollToTop from './ScrollToTop';
+import { ContextMenuProvider } from '@/lib/context-menu/ContextMenuProvider';
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(
@@ -21,8 +22,10 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 
   return (
     <QueryClientProvider client={queryClient}>
+        <ContextMenuProvider>
         {children}
-      <ScrollToTop />
+        </ContextMenuProvider>
+        <ScrollToTop />
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );

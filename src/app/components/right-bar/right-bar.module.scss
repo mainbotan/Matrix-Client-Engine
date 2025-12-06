@@ -18,7 +18,7 @@
     padding-top: 2rem;
     overflow: hidden;
     display: flex;
-    animation: show-bar 0.2s forwards;
+    opacity: 1;
     border-left: 1px solid var(--color-stroke-primary);
     
     .grid {
@@ -47,7 +47,7 @@
             }
             &:hover {
                 .svg {
-                    fill: var(--color-icon-active);
+                    fill: var(--color-text-primary);
                 }
             }
         }
