@@ -8,6 +8,7 @@ import Button from '@/assets/ui-kit/button/button';
 import Thunder from '@/assets/ui-kit/icons/thunder';
 import History from '@/assets/ui-kit/icons/history';
 import clsx from 'clsx';
+import LogLine from '@/assets/ui-kit/svgs/log-line/log-line';
 
 export default function Layout({
   children,
@@ -58,17 +59,42 @@ export default function Layout({
             </div>
             <div className={styles.content}>
                 <div className={styles.actions}>
-                  <div className={styles.label}>
-                    <Thunder className={styles.svg} />
-                    <span className={styles.capture}>Быстрые действия</span>
+                  <div className={styles.grid}>
+                    <div className={styles.label}>
+                      <Thunder className={styles.svg} />
+                      <span className={styles.capture}>Быстрые действия</span>
+                    </div>
+                    <Button className={styles.action}>Новая сделка</Button>
+                    <Button className={styles.action}>Отчёт за месяц</Button>
                   </div>
-                  <Button className={styles.action}>Новая сделка</Button>
-                  <Button className={styles.action}>Отчёт за месяц</Button>
                 </div>
                 {children}
             </div>
-            <div className={clsx(styles.log, styles.empty)}>
-              <History className={styles.icon} />
+            <div className={styles.history}>
+              <div className={clsx(styles.inner)}>
+                <div className={styles.grid}>
+                  <div className={styles.top}>
+                    <div className={styles.icon}><History className={styles.svg} /></div>
+                    <div className={styles.name}>История</div>
+                  </div>
+                  <div className={styles.logs}>
+                    <section className={styles.log}>
+                      <div className={styles.base}>
+                        <div className={styles.marker}><span className={styles.circle} /></div>
+                        <div className={styles.info}>
+                          <div className={styles.action}>Создание сотрудника</div>
+                        </div>
+                      </div>
+                      <div className={styles.details}>
+                        <div className={styles.way}><span className={styles.line} /></div>
+                        <div className={styles.info}>
+                            <div className={styles.stroke}>07.12.2025</div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
     )
