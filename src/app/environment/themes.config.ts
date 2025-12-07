@@ -11,8 +11,18 @@ export const themesConfig: ThemeConfig[] = [
     overview: '' // Здесь будет URL к изображению
   },
   { 
+    id: 'cherry',
+    name: 'Cherry',
+    overview: '' // Здесь будет URL к изображению
+  },
+  { 
     id: 'dark',
     name: 'Classic Dark',
+    overview: '' // Здесь будет URL к изображению
+  },
+  { 
+    id: 'satanic-dark',
+    name: 'Satanic Dark',
     overview: '' // Здесь будет URL к изображению
   }
 ];

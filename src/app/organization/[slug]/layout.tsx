@@ -4,6 +4,10 @@ import Team from '@/assets/ui-kit/icons/team';
 import Deal from '@/assets/ui-kit/icons/deal';
 import Clients from '@/assets/ui-kit/icons/clients';
 import Warehouse from '@/assets/ui-kit/icons/warehouse';
+import Button from '@/assets/ui-kit/button/button';
+import Thunder from '@/assets/ui-kit/icons/thunder';
+import History from '@/assets/ui-kit/icons/history';
+import clsx from 'clsx';
 
 export default function Layout({
   children,
@@ -13,48 +17,58 @@ export default function Layout({
     return (
         <div className={styles.container}>
             <div className={styles.panel}>
-                <div className={styles.label}>
+                <div className={styles.grid}>
+                  <div className={styles.label}>
 
-                </div>
-                <div className={styles.info}>
-                  <div className={styles.name}>Организация</div>
-                  <div className={styles.description}>89 сотрудников</div>
-                </div>
-                <section className={styles.sections}>
-                  <section className={styles.section}>
-                    <div className={styles.icon}><Team className={styles.svg} /></div>
-                    <div className={styles.name}>Сотрудники</div>
+                  </div>
+                  <div className={styles.info}>
+                    <div className={styles.name}>My Project</div>
+                    <div className={styles.description}>89 сотрудников</div>
+                  </div>
+                  <section className={styles.sections}>
+                    <section className={styles.section}>
+                      <div className={styles.icon}><Team className={styles.svg} /></div>
+                      <div className={styles.name}>Сотрудники</div>
+                    </section>
+                    <section className={styles.section}>
+                      <div className={styles.icon}><Deal className={styles.svg} /></div>
+                      <div className={styles.name}>Сделки</div>
+                    </section>
+                    <section className={styles.section}>
+                      <div className={styles.icon}><Clients className={styles.svg} /></div>
+                      <div className={styles.name}>CRM</div>
+                    </section>
+                    <section className={styles.section}>
+                      <div className={styles.icon}><Warehouse className={styles.svg} /></div>
+                      <div className={styles.name}>Склад</div>
+                    </section>
                   </section>
-                  <section className={styles.section}>
-                    <div className={styles.icon}><Deal className={styles.svg} /></div>
-                    <div className={styles.name}>Сделки</div>
-                  </section>
-                  <section className={styles.section}>
-                    <div className={styles.icon}><Clients className={styles.svg} /></div>
-                    <div className={styles.name}>CRM</div>
-                  </section>
-                  <section className={styles.section}>
-                    <div className={styles.icon}><Warehouse className={styles.svg} /></div>
-                    <div className={styles.name}>Склад</div>
-                  </section>
-                </section>
-                <div className={styles.widgets}>
-                  <section className={styles.widget}>
+                  <div className={styles.widgets}>
+                    <section className={styles.widget}>
 
-                  </section>
-                  <section className={styles.widget}>
-                    
-                  </section>
-                  <section className={styles.widget}>
-                    
-                  </section>
+                    </section>
+                    <section className={styles.widget}>
+                      
+                    </section>
+                    <section className={styles.widget}>
+                      
+                    </section>
+                  </div>
                 </div>
             </div>
             <div className={styles.content}>
+                <div className={styles.actions}>
+                  <div className={styles.label}>
+                    <Thunder className={styles.svg} />
+                    <span className={styles.capture}>Быстрые действия</span>
+                  </div>
+                  <Button className={styles.action}>Новая сделка</Button>
+                  <Button className={styles.action}>Отчёт за месяц</Button>
+                </div>
                 {children}
             </div>
-            <div className={styles.notes}>
-              
+            <div className={clsx(styles.log, styles.empty)}>
+              <History className={styles.icon} />
             </div>
         </div>
     )

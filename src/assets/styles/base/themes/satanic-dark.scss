@@ -1,12 +1,12 @@
 @mixin theme {
     // ==================== CORE IDENTITY ====================
-    --color-brand: #9e37d6;
+    --color-brand: #b63f3f;
     --color-brand-light: var(--color-brand);
     --color-brand-pale: var(--color-brand);
-    --color-leader: #0e0e0f;
+    --color-leader: #000000;
     --color-contrast: #ebebeb;
     --color-header: #1e1e1e;
-    --color-accent: rgb(104, 135, 236);
+    --color-accent: var(--color-brand);
     --color-accent-text-primary: #ffffff;
     
     // ==================== AIRY SURFACES ====================
@@ -21,7 +21,7 @@
     // ==================== CALM TEXT ====================
     --color-text-primary: #ededed;
     --color-text-secondary: #c2c2c2;
-    --color-text-hint: #4793fd;
+    --color-text-hint: #fd4747;
     --color-text-description: #575757;
     --color-text-ghost: #c1c1c1;
     --color-contrast-text-primary: #0c0c0c;

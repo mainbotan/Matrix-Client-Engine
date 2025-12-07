@@ -1,43 +1,45 @@
 @mixin theme {
     // ==================== CORE IDENTITY ====================
-    --color-brand: #9e37d6;
+    --color-brand: #ef6cdf;
     --color-brand-light: var(--color-brand);
     --color-brand-pale: var(--color-brand);
-    --color-leader: #0e0e0f;
-    --color-contrast: #ebebeb;
-    --color-header: #1e1e1e;
-    --color-accent: rgb(104, 135, 236);
+    --color-leader: #fce7f9;
+    --color-contrast: #272727;
+    // --color-header: #cc39b8;
+    --color-accent: var(--color-brand);
     --color-accent-text-primary: #ffffff;
     
     // ==================== AIRY SURFACES ====================
-    --color-surface-primary: #141414;
-    --color-surface-secondary: #111111;
-    --color-surface-tertiary: rgb(35, 35, 35);
-    --color-surface-elevated: #1c1b1b;
-    --color-surface-overlay: rgba(18, 17, 17, 0.95);
-    --color-surface-glass: rgba(15, 15, 15, 0.801);
-    --color-surface-glass-secondary: rgba(23, 23, 23, 0.775);
+    --color-surface-primary: #e9c8e9;
+    --color-surface-secondary: #f1d4f1;
+    --color-surface-tertiary: #d69ec7;
+    --color-surface-elevated: #e2e1e1cf;
+    --color-surface-overlay: rgba(214, 214, 214, 0.95);
+    --color-surface-glass: #c3c3c391;
+    --color-surface-glass-secondary: #f1f1f1df;
 
     // ==================== CALM TEXT ====================
-    --color-text-primary: #ededed;
-    --color-text-secondary: #c2c2c2;
-    --color-text-hint: #4793fd;
-    --color-text-description: #575757;
-    --color-text-ghost: #c1c1c1;
-    --color-contrast-text-primary: #0c0c0c;
-    --color-contrast-text-secondary: #202020;
-    --color-contrast-text-hint: #4d93f6;
-    --color-contrast-text-description: #868585;
-    --color-contrast-text-ghost: #cbd5e1;
+    --color-text-primary: #0c0c0c;
+    --color-text-secondary: #202020;
+    --color-text-tertiary: #242424ce;
+    --color-text-hint: #4d93f6;
+    --color-text-description: #4d4d4d;
+    --color-text-ghost: #cbd5e1;
+    --color-contrast-text-primary: #eee;
+    --color-contrast-text-secondary: #d8d8d8;
+    --color-contrast-text-hint: var(--color-text-hint);
+    --color-contrast-text-description: #a8a8a8;
+    --color-contrast-text-ghost: #bcbcbc;
 
     // ==================== SUBTLE STROKES ====================
-    --color-stroke-primary: #323232;
-    --color-stroke-secondary: #222222;
-    --color-stroke-tertiary: #696969;
+    --color-stroke-primary: #f4c2dd;
+    --color-stroke-secondary: #cacaca;
+    --color-stroke-tertiary: #94a3b8;
     --color-stroke-focus: var(--color-brand-light);
 
     // ==================== GENTLE INDICATORS ====================
-    --color-error: #f87171;
+    --color-red: #f63939;
+    --color-error-alpha: rgba(235, 121, 121, 0.465);
     --color-error-light: #fecaca;
     --color-warning: #fbbf24;
     --color-warning-light: #fef3c7;
@@ -46,17 +48,17 @@
     --color-critical: #ef4444;
     --color-success: #34d399;
     --color-success-light: #d1fae5;
-
-    // ==================== ICONS ====================
-    --color-icon-primary: #adadad;
-    --color-icon-active: var(--color-accent);
     
+    // ==================== ICONS ====================
+    --color-icon-primary: #b95dbc;
+    --color-icon-active: var(--color-brand);
+
     // ==================== EXTENDED PALETTE ====================
-    --color-red: #f63939;
+    --color-red: #f73f3f;
     --color-blue: #4793fd;
     --color-orange: #fb923c;
     --color-yellow: #facc15;
-    --color-green: #34d399;
+    --color-green: #34d366;
     --color-purple: #4e20c3;
     --color-cyan: #22d3ee;
     --color-magenta: #f472b6;
