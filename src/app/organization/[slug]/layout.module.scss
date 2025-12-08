@@ -28,6 +28,12 @@
     .content {
         display: flex;
         flex: 1;
+        overflow: hidden;
+        max-width: calc(100vw - 3rem - 10rem - 9rem - 2rem);
+
+        @media (max-width: 720px) {
+            max-width: calc(100vw - 3rem);
+        }
     }
     .history { 
         display: flex;
@@ -47,14 +53,19 @@
         display: flex;
         flex-flow: column nowrap;
         position: sticky;
-        top: 1.27em;
+        top: 1.25em;
         width: calc(10rem - 1px);
+        min-width: calc(10rem - 1px);
         overflow: hidden;
     }
     .label {
         height: 5rem;
         border-bottom: 1px solid var(--color-stroke-secondary);
         background-color: var(--color-surface-primary);
+        background-size: cover;
+        background-position: center;
+        // background: linear-gradient(90deg, #3e6ff5, #c42487);
+        border-bottom-right-radius: .5em;
     }
     .info {
         font-size: 0.5em;
@@ -130,6 +141,7 @@
 // Content
 .content {
     position: relative;
+    overflow: hidden;
 
     .actions {
         display: block;
@@ -196,6 +208,7 @@
     position: sticky;
     top: 3.3em;
     width: 9rem;
+    min-width: 9rem;
     height: calc(100vh - 2rem);
     overflow-x: hidden;
     overflow-y: scroll;

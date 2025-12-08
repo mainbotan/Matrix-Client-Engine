@@ -23,7 +23,7 @@ export default function Layout({
 
                   </div>
                   <div className={styles.info}>
-                    <div className={styles.name}>My Project</div>
+                    <div className={styles.name}>Huly Platform</div>
                     <div className={styles.description}>89 сотрудников</div>
                   </div>
                   <section className={styles.sections}>
@@ -58,7 +58,7 @@ export default function Layout({
                 </div>
             </div>
             <div className={styles.content}>
-                <div className={styles.actions}>
+                {/* <div className={styles.actions}>
                   <div className={styles.grid}>
                     <div className={styles.label}>
                       <Thunder className={styles.svg} />
@@ -67,7 +67,7 @@ export default function Layout({
                     <Button className={styles.action}>Новая сделка</Button>
                     <Button className={styles.action}>Отчёт за месяц</Button>
                   </div>
-                </div>
+                </div> */}
                 {children}
             </div>
             <div className={styles.history}>

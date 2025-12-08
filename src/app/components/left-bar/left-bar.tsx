@@ -34,7 +34,19 @@ export function LeftBar() {
                 </section>
                 <section className={styles.organizations}>
                     <Link href='/organization/company-slug' onContextMenu={(e) => onContextMenu(e, '')} className={clsx(styles.item, styles.active)}>
-                        <span className={styles.icon}></span>
+                        <span className={clsx(styles.icon, styles.shaking)} style={{backgroundImage: 'url(https://avatars.githubusercontent.com/u/87086734?s=200&v=4)'}}><span className={styles.news}>6</span></span>
+                        <span className={styles.marker} />
+                    </Link>
+                    <Link href='/organization/company-slug' onContextMenu={(e) => onContextMenu(e, '')} className={clsx(styles.item)}>
+                        <span className={styles.icon} style={{backgroundImage: 'url(https://avatars.mds.yandex.net/i?id=e2d18d9333d5c26e044d19c9df0218d803ee062ab3de4165-5236580-images-thumbs&n=13)'}}></span>
+                        <span className={styles.marker} />
+                    </Link>
+                    <Link href='/organization/company-slug' onContextMenu={(e) => onContextMenu(e, '')} className={clsx(styles.item)}>
+                        <span className={styles.icon} style={{backgroundImage: 'url(https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png)'}}></span>
+                        <span className={styles.marker} />
+                    </Link>
+                    <Link href='/organization/company-slug' onContextMenu={(e) => onContextMenu(e, '')} className={clsx(styles.item)}>
+                        <span className={styles.icon} style={{backgroundImage: 'url(https://avatars.githubusercontent.com/u/1246387?v=4)'}}></span>
                         <span className={styles.marker} />
                     </Link>
                     <section className={styles.add}>

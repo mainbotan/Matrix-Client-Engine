@@ -1,0 +1,190 @@
+@use '@/assets/styles/_mixins.scss' as *;
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    overflow: hidden;
+
+    .content {
+        display: flex;
+        flex: 1;
+    }
+}
+
+
+.head {
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 0.8em;
+    gap: 0.6em;
+    overflow: hidden;
+
+    .single {
+        display: flex;
+        padding: 1em;
+        flex-flow: column nowrap;
+        gap: 0.6em;
+        padding: 0.8em 0.8em 0 0.8em;
+    }
+    .ray {
+        font-size: 0.55em;
+        color: var(--color-text-secondary);
+        display: inline-flex;
+        flex-flow: row nowrap;
+        gap: 0.5em;
+
+        .point {
+            @include cursor(pointer);
+            transition: color var(--transition);
+
+            &:hover {
+                color: var(--color-accent);
+            }
+        }
+        .active {
+            color: var(--color-accent);
+        }
+    }
+    .sections {
+        display: block;
+        overflow-x: scroll;
+        @include no-scrollbar();
+        font-size: 0.53em;
+        border-bottom: 1px solid var(--color-stroke-secondary);
+        padding: 0 0.8em;
+
+        .grid {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: .7em;
+
+            .section {
+                position: relative;
+                display: inline-flex;
+                flex-flow: row nowrap;
+                gap: 0.6em;
+                padding: 0.6em .6em;
+                border-top-left-radius: 0.4em;
+                border-top-right-radius: 0.4em;
+                @include cursor(pointer);
+                border-top: 1px solid transparent;
+                border-left: 1px solid transparent;
+                border-right: 1px solid transparent;
+                white-space: nowrap;
+                transition: background-color var(--transition), border-color var(--transition);
+
+                .icon {
+                    display: inline-flex;
+                    align-items: center;
+                    
+                    .svg {
+                        width: 1.2em;
+                        height: 1.2em;
+                        fill: var(--color-icon-primary);
+                    }
+                }
+                .capture {
+                    display: flex;
+                    align-items: center;
+                }
+                .marker {
+                    position: absolute;
+                    z-index: 10;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: .24em;
+                    border-top-left-radius: .4em;
+                    border-top-right-radius: .4em;
+                    background-color: var(--color-accent);
+                    opacity: 0;
+                    transition: opacity var(--transition);
+                    pointer-events: none;
+                }
+
+                &:hover {
+                    background-color: var(--color-surface-secondary);
+                    border-color: var(--color-stroke-secondary);
+                }
+                &.active {
+                    .icon .svg {
+                        fill: var(--color-accent);
+                    }
+                    .marker {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.canvas {
+    display: block;
+    flex: 1;
+    overflow-x: scroll;
+    font-size: 0.5em;
+    padding: 1em;
+    
+    .grid {
+        display: flex;
+        height: 100%;
+        flex-flow: row nowrap;
+        gap: 1em;
+
+        .col {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 0.6em;
+            width: 11rem;
+            min-width: 11rem;
+
+            .top {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                gap: .5em;
+                font-size: .8em;
+                padding: .4em .2em;
+                font-weight: 600;
+                color: var(--color-text-secondary);
+                line-height: 1.2;
+
+                .marker {
+                    width: 0.5em;
+                    height: 0.5em;
+                    background-color: var(--color-accent);
+                    border-radius: 50%;
+                }
+            }
+            .add {
+                display: flex;
+                height: 4em;
+                border-radius: .5em;
+                border: 1px solid var(--color-stroke-secondary);
+                align-items: center;
+                justify-content: center;
+                @include cursor(pointer);
+                transition: transform var(--transition);
+
+                .svg {
+                    width: 1em;
+                    height: 1em;
+                    fill: var(--color-surface-tertiary);
+                }
+                &:hover {
+                    transform: scale(1.02);
+                }
+            }
+            .block {
+                display: flex;
+                min-height: 9em;
+                background-color: var(--color-surface-glass-secondary);
+                border-radius: .5em;
+                border: 1px solid var(--color-stroke-secondary);
+                @include cursor(pointer);
+            }
+        }
+    }
+}

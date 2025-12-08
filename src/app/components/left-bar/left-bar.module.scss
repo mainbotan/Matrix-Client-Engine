@@ -92,6 +92,19 @@
         justify-content: center;
         position: relative;
 
+        @keyframes periodic-shake {
+            0%, 97%, 100% {
+                transform: rotate(0deg);
+            }
+            98% {
+                transform: rotate(5deg);
+            }
+            99% {
+                transform: rotate(-5deg);
+            }
+        }
+
+
         .icon {
             width: 1.7rem;
             height: 1.7rem;
@@ -102,9 +115,37 @@
             background-position: center;
             @include cursor(pointer);
             transition: transform var(--transition);
+            position: relative;
+            
+            // Устанавливаем точку трансформации в центр для плавного вращения
+            transform-origin: center center;
+
+            .news {
+                position: absolute;
+                z-index: 10;
+                font-size: 0.4em;
+                background-color: var(--color-accent);
+                padding: 0.04em 0.3em;
+                border-radius: 0.6em;
+                display: inline-flex;
+                align-items: center;
+                top: -0.25em;
+                left: -0.25em;
+                color: var(--color-accent-text-primary);
+            }
 
             &:hover {
                 transform: scale(1.02);
+            }
+            
+            &.shaking {
+                animation: periodic-shake 8s ease-in-out infinite;
+                
+                &:hover {
+                    // При hover можно остановить периодическую тряску
+                    animation: none;
+                    transform: scale(1.02);
+                }
             }
         }
 
