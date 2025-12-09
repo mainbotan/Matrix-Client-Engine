@@ -48,6 +48,15 @@
             border: 1px solid var(--color-stroke-secondary);
             border-radius: 0.4em;
             transition: border-color var(--transition);
+            background-color: var(--color-surface-secondary);
+            background-position: center;
+            background-size: 100%;
+            overflow: hidden;
+
+            .img {
+                width: 200%;
+                max-width: 200%;
+            }
         }
         .name {
             font-size: 0.5em;

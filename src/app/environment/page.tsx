@@ -54,14 +54,13 @@ export default function Page() {
                   }
                 }}
               >
-                <div 
-                  className={styles.overview}
-                  style={{
-                    backgroundImage: theme.overview 
-                      ? `url(${theme.overview})`
-                      : undefined
-                  }}
-                ></div>
+                <div className={styles.overview}>
+                  {theme.overview ? (
+                    <img className={styles.img} src={theme.overview} alt="Overview" />
+                  ) : (
+                    <span></span>
+                  )}
+                </div>
                 <div className={styles.name}>{theme.name}</div>
               </div>
             ))}

@@ -4,6 +4,7 @@ import Clients from '@/assets/ui-kit/icons/clients';
 import Kanban from '@/assets/ui-kit/icons/kanban';
 import Plus from '@/assets/ui-kit/icons/plus';
 import Source from '@/assets/ui-kit/icons/source';
+import Wallet from '@/assets/ui-kit/icons/wallet';
 
 export default function Page() {
     return (
@@ -50,7 +51,9 @@ export default function Page() {
                             <div className={styles.add}><Plus className={styles.svg} /></div>
                             <div className={styles.block}>
                                 <div className={styles.start}>
-                                    <div className={styles.icon}><span className={styles.circle} /></div>
+                                    <div className={styles.icon}>
+                                        <span style={{backgroundImage: 'url(https://avatars.githubusercontent.com/u/132403496?v=4)'}} className={styles.circle} />
+                                    </div>
                                     <div className={styles.info}>
                                         <div className={styles.name}>Client X Y Z</div>
                                         <div className={styles.description}>Создано 08.12.2025</div>
@@ -77,7 +80,7 @@ export default function Page() {
                                         </div>
                                     </section>
                                     <section className={styles.section}>
-                                        <div className={styles.icon}><div style={{backgroundImage: 'url(https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png)'}} className={styles.avatar} /></div>
+                                        <div className={styles.icon}><Wallet className={styles.svg} /></div>
                                         <div className={styles.info}>
                                             <div className={styles.capture}>Возможная выручка</div>
                                             <div className={styles.count}>

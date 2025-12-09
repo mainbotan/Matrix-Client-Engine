@@ -8,21 +8,21 @@ export const themesConfig: ThemeConfig[] = [
   { 
     id: 'light',
     name: 'Classic Light',
-    overview: '' // Здесь будет URL к изображению
+    overview: '/images/themes/classic-light.png'
   },
   { 
     id: 'cherry',
     name: 'Cherry',
-    overview: '' // Здесь будет URL к изображению
+    overview: '/images/themes/cherry.png'
   },
   { 
     id: 'dark',
     name: 'Classic Dark',
-    overview: '' // Здесь будет URL к изображению
+    overview: '/images/themes/classic-dark.png'
   },
   { 
     id: 'satanic-dark',
     name: 'Satanic Dark',
-    overview: '' // Здесь будет URL к изображению
+    overview: '/images/themes/satanic-dark.png'
   }
 ];
