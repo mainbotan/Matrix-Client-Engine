@@ -58,7 +58,7 @@ export function TopBar() {
                     <Input className={styles.input} placeholder='Поиск по организации...' />
                 </section>
                 <section className={styles.actions}>
-                    <Button variant='contrast' className={clsx(styles.action, styles.invite)}>
+                    <Button variant='default' className={clsx(styles.action, styles.invite)}>
                         <Plus className={styles.svg} />
                         <span className={styles.span}>Пригласить</span>
                     </Button>

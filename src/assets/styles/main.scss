@@ -5,6 +5,7 @@
 @use 'base/themes/light' as light;
 @use 'base/themes/satanic-dark.scss' as satanic-dark;
 @use 'base/themes/cherry.scss' as cherry;
+@use 'base/themes/green-dope.scss' as green-dope;
 
 // Важно: :root без темы - только общие переменные
 :root {
@@ -71,6 +72,9 @@ html[data-theme="satanic-dark"] {
 }
 html[data-theme="cherry"] {
   @include cherry.theme;
+}
+html[data-theme="green-dope"] {
+  @include green-dope.theme;
 }
 
 // Убираем переходы во время загрузки, чтобы избежать мерцания

@@ -11,18 +11,23 @@ export const themesConfig: ThemeConfig[] = [
     overview: '/images/themes/classic-light.png'
   },
   { 
-    id: 'cherry',
-    name: 'Cherry',
-    overview: '/images/themes/cherry.png'
-  },
-  { 
     id: 'dark',
     name: 'Classic Dark',
     overview: '/images/themes/classic-dark.png'
   },
   { 
+    id: 'cherry',
+    name: 'Cherry',
+    overview: '/images/themes/cherry.png'
+  },
+  { 
     id: 'satanic-dark',
     name: 'Satanic Dark',
     overview: '/images/themes/satanic-dark.png'
+  },
+  { 
+    id: 'green-dope',
+    name: 'Green Dope',
+    overview: '/images/themes/green-dope.png'
   }
 ];

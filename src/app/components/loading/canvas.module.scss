@@ -23,6 +23,11 @@
         animation: show-focus 0.4s forwards;
         margin-bottom: 3rem;
 
+        .icon {
+            width: 3em;
+            height: 3em;
+            fill: var(--color-accent);
+        }
         .code {
             font-size: 2em;
             font-weight: 600;

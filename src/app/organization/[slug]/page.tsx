@@ -5,6 +5,7 @@ import Kanban from '@/assets/ui-kit/icons/kanban';
 import Plus from '@/assets/ui-kit/icons/plus';
 import Source from '@/assets/ui-kit/icons/source';
 import Wallet from '@/assets/ui-kit/icons/wallet';
+import Time from '@/assets/ui-kit/icons/time';
 
 export default function Page() {
     return (
@@ -33,7 +34,7 @@ export default function Page() {
                             <span className={styles.marker} />
                         </section>
                         <section className={clsx(styles.section)}>
-                            <div className={styles.icon}><Clients className={styles.svg} /></div>
+                            <div className={styles.icon}><Time className={styles.svg} /></div>
                             <div className={styles.capture}>Сроки</div>
                             <span className={styles.marker} />
                         </section>
