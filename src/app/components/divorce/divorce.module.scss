@@ -24,12 +24,11 @@
     justify-content: center;
     padding: 1em;
 
-    .icon {
+    .icon, .d3 {
         display: inline-flex;
         width: 5em;
         height: 5em;
         position: relative;
-        overflow: hidden;
 
         @keyframes show-svg {
             0% {
@@ -46,6 +45,15 @@
             height: 100%;
             fill: var(--color-accent);
             animation: show-svg 0.4s forwards;
+        }
+
+        &.d3 {
+            width: auto;
+            height: auto;
+            font-size: 0.7em;
+        }
+        &.icon {
+            overflow: hidden;
         }
     }
     .img {
@@ -267,6 +275,8 @@
         }
     }
     @media (max-width: 720px) {
+        display: none;
+        
         .base {
             width: 100%;
         }

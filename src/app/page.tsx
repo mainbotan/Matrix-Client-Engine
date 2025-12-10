@@ -1,6 +1,5 @@
 'use client';
 
-import Cube from '@/assets/ui-kit/icons/cube';
 import styles from './components/divorce/divorce.module.scss';
 import clsx from 'clsx';
 import Cloud from '@/assets/ui-kit/icons/cloud';
@@ -20,6 +19,7 @@ import Button from '@/assets/ui-kit/button/button';
 import { useGuide } from '@/lib/guide';
 import Cursor from '@/assets/ui-kit/icons/cursor';
 import GuideDemo from './components/divorce/guide-demo/guide-demo';
+import Cube from '@/assets/ui-kit/3d/cube/cube';
 
 export default function Page() {
     const { enabled, toggleGuide } = useGuide();
@@ -28,8 +28,8 @@ export default function Page() {
         <div className={styles.container}>
             <div className={styles.focus}>
                 <div className={styles.media}>
-                    <div className={styles.icon}>
-                        <Cube className={styles.svg} />
+                    <div className={styles.d3}>
+                        <Cube />
                     </div>
                 </div>
                 <div className={styles.top}>
