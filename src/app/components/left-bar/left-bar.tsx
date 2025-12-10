@@ -26,7 +26,13 @@ export function LeftBar() {
     return (
         <div className={clsx(styles.container, styles.compact)}>
             <div className={styles.grid}>
-                <section className={styles.sections}>
+                <section
+                    data-guide-about="Раздел для управления сотрудниками"
+                    data-guide-icon="Team"
+                    data-guide-id="team-management-section"
+                    data-guide-priority="high"
+                    data-guide-position="bottom"
+                className={styles.sections}>
                     <Link href='/account/organizations' className={clsx(styles.section, styles.active)}>
                         <Collection className={styles.svg} />
                         <span className={styles.capture}>Организации</span>

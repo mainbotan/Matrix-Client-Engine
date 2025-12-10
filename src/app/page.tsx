@@ -1,3 +1,5 @@
+'use client';
+
 import Cube from '@/assets/ui-kit/icons/cube';
 import styles from './components/divorce/divorce.module.scss';
 import clsx from 'clsx';
@@ -15,8 +17,13 @@ import Server from '@/assets/ui-kit/icons/server';
 import Book from '@/assets/ui-kit/icons/book';
 import Switch from '@/assets/ui-kit/switch/switch';
 import Button from '@/assets/ui-kit/button/button';
+import { useGuide } from '@/lib/guide';
+import Cursor from '@/assets/ui-kit/icons/cursor';
+import GuideDemo from './components/divorce/guide-demo/guide-demo';
 
 export default function Page() {
+    const { enabled, toggleGuide } = useGuide();
+
     return (
         <div className={styles.container}>
             <div className={styles.focus}>
@@ -155,13 +162,19 @@ export default function Page() {
                 </div> */}
                 <div className={styles.guide}>
                     <div className={styles.preview}>
+                        <GuideDemo />
                     </div>
                     <div className={styles.base}>
                         <div className={styles.capture}>
-                            Использовать гид ознакомления - <span className={styles.secondary}>при наведении на важные элементы интерфейса будем показывать их предназначение.</span>
+                            Использовать гид ознакомления <span className={styles.secondary}>- при наведении на важные элементы интерфейса будем показывать их предназначение.</span>
                         </div>
                         <div className={styles.action}>
-                            <Switch className={styles.switch} variant='accent' />
+                            <Switch 
+                                className={styles.switch} 
+                                variant='accent'
+                                checked={enabled} // Используем состояние из хука
+                                onChange={toggleGuide} // Используем функцию переключения
+                            />
                         </div>
                     </div>
                 </div>

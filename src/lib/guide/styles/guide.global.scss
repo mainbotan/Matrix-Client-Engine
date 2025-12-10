@@ -1,0 +1,32 @@
+@use '@/assets/styles/_mixins.scss' as *;
+
+// Глобальные стили для элементов с гидом
+[data-guide-about] {
+  // position: relative;
+  
+  // // &::after {
+  // //   content: '';
+  // //   position: absolute;
+  // //   inset: -2px;
+  // //   border-radius: inherit;
+  // //   background: linear-gradient(135deg, var(--color-brand) 0%, transparent 100%);
+  // //   opacity: 0;
+  // //   transition: opacity 0.3s ease;
+  // //   pointer-events: none;
+  // //   z-index: 1;
+  // // }
+  
+  // &:hover::after {
+  //   opacity: 0.1;
+  // }
+}
+
+// Когда гид включен
+.guide-enabled [data-guide-about] {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-1px);
+    z-index: 9999;
+  }
+}

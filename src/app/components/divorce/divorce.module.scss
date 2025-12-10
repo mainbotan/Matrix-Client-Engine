@@ -242,7 +242,11 @@
         width: 12em;
         height: 3.7em;
         border-radius: 1em;
-        background-color: var(--color-surface-tertiary);
+        background-color: var(--color-surface-primary);
+
+        .cursor {
+            fill: var(--color-accent);
+        }
     }
     .base {
         display: inline-flex;
