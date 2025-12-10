@@ -135,6 +135,20 @@ export default function Page() {
                             </div>
                             <div className={styles.add}><Plus className={styles.svg} /></div>
                         </div>
+                        <div className={styles.col}>
+                            <div className={styles.top}>
+                                <span className={styles.marker} />
+                                <span className={styles.name}>В работе</span>
+                            </div>
+                            <div className={styles.add}><Plus className={styles.svg} /></div>
+                        </div>
+                        <div className={styles.col}>
+                            <div className={styles.top}>
+                                <span className={styles.marker} />
+                                <span className={styles.name}>Завершены</span>
+                            </div>
+                            <div className={styles.add}><Plus className={styles.svg} /></div>
+                        </div>
                     </div>
                 </div>
             </div>

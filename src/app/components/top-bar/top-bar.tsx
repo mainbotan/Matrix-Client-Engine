@@ -42,7 +42,7 @@ export function TopBar() {
             <div className={styles.grid}>
                 <Link href='/' className={styles.logo}>
                     <img src='/images/logo/base.png' className={styles.icon} />
-                    <span className={styles.name}>Matrix</span>
+                    <span className={styles.name}>Matrix One</span>
                 </Link>
                 <section className={styles.sections}>
                     <span className={styles.section}>Рабочий стол</span>

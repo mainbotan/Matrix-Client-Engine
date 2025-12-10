@@ -6,15 +6,15 @@ import { InputHTMLAttributes, ReactNode } from 'react';
 
 interface SwitchProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
   label?: ReactNode;
-  variant?: 'classic' | 'contrast' | 'accent' | 'alternative' | 'brand';
-  switchSize?: 'sm' | 'md' | 'bg';
+  variant?: 'default' | 'leader' | 'contrast' | 'elevated' | 'empty' | 'glass' | 'brand' | 'accent';
+  size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
 }
 
 export default function Switch({
   label,
-  variant = 'classic',
-  switchSize = 'md',
+  variant = 'default',
+  size = 'md',
   disabled = false,
   className,
   ...props
@@ -22,17 +22,23 @@ export default function Switch({
   return (
     <label className={clsx(
       styles.switchWrapper,
-      styles[switchSize],
-      { [styles.disabled]: disabled },
+      {
+        [styles.disabled]: disabled,
+        [styles.sm]: size === 'sm',
+        [styles.lg]: size === 'lg',
+      },
       className
     )}>
       <input
         type="checkbox"
-        className={clsx(styles.switch, styles[variant])}
+        className={clsx(styles.switch)}
         disabled={disabled}
         {...props}
       />
-      <span className={styles.slider} />
+      <span className={clsx(
+        styles.slider,
+        styles[variant]
+      )} />
       {label && <span className={styles.label}>{label}</span>}
     </label>
   );
