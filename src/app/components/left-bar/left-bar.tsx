@@ -43,9 +43,10 @@ export function LeftBar() {
                         <span className={clsx(styles.icon, styles.shaking)} style={{backgroundImage: 'url(https://avatars.mds.yandex.net/i?id=e2d18d9333d5c26e044d19c9df0218d803ee062ab3de4165-5236580-images-thumbs&n=13)'}}><span className={styles.news}>6</span></span>
                         <span className={styles.marker} />
                     </Link>
-                    <section className={styles.add}>
+                    <section className={styles.inter}><span className={styles.line} /></section>
+                    <Link href='/organization/create' className={styles.add}>
                         <Plus className={styles.svg} />
-                    </section>
+                    </Link>
                 </section>
             </div>
         </div>
