@@ -20,6 +20,7 @@ import { useGuide } from '@/lib/guide';
 import Cursor from '@/assets/ui-kit/icons/cursor';
 import GuideDemo from './components/divorce/guide-demo/guide-demo';
 import Cube from '@/assets/ui-kit/3d/cube/cube';
+import Link from 'next/link';
 
 export default function Page() {
     const { enabled, toggleGuide } = useGuide();
@@ -45,14 +46,14 @@ export default function Page() {
                             <section className={styles.title}>
                                 Впервые здесь?
                             </section>
-                            <section className={styles.section}>
+                            <Link href='/organization/create' className={styles.section}>
                                 <span className={styles.icon}>
                                     <Plus className={styles.svg} />
                                 </span>
                                 <span className={styles.info}>
                                     <div className={styles.name}>Создание организации</div>
                                 </span>
-                            </section>
+                            </Link>
                             <section className={styles.section}>
                                 <span className={styles.icon}>
                                     <TwoCards className={styles.svg} />

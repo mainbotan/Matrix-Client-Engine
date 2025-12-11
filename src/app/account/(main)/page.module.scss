@@ -1,8 +1,151 @@
 @use '@/assets/styles/_mixins.scss' as *;
 
+.container {
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    padding: 0 0;
+    margin: 1rem 6rem;
+
+    .focus {
+        display: flex;
+        flex: 1;
+        max-width: 40rem;
+        flex-flow: column nowrap;
+    }
+    .label {
+        min-height: 13rem;
+        position: relative;
+        background-color: var(--color-surface-primary);
+        background: #33C36C;
+        background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+        padding: 0 1rem;
+        overflow: hidden;
+        background: var(--color-accent);
+        color: var(--color-accent-text-primary);
+        border-radius: .4em;
+
+        .focus {
+            justify-content: end;
+            padding: 1rem 0;
+            position: relative;
+            z-index: 10;
+
+            @media (max-width: 720px) {
+                padding: .4em 0;
+            }
+        }
+
+        .base {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 1em;
+
+            .info {
+                display: flex;
+                flex: 1;
+                flex-flow: column nowrap;
+                gap: 0.2em;
+                justify-content: end;
+
+                .name {
+                    font-weight: 600;
+                    line-height: 1.2;
+                }
+                .scopes {
+                    display: inline-flex;
+                    flex-flow: row nowrap;
+                    font-size: .44em;
+                    align-items: center;
+                    gap: .6em;
+
+                    .bar {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        align-items: center;
+                        gap: .4em;
+
+                        .box {
+                            display: inline-flex;
+                            width: 1.4em;
+                            height: 1.4em;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+                .actions {
+                    display: inline-flex;
+                    flex-flow: row wrap;
+                    gap: 1em;
+                    font-size: .4em;
+                    margin-top: 1em;
+
+                    .action {
+                        height: 3em;
+                        border-radius: 2em;
+                        border-width: 2px;
+                        transition: transform var(--transition);
+                        border-color: var(--color-contrast);
+
+                        &:hover {
+                            transform: scale(1.02);
+                        }
+                    }
+                }
+                @media (max-width: 720px) {
+                    font-size: .7em;
+                    justify-content: center;
+                }
+            }
+            .avatar {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                .circle {
+                    width: 10rem;
+                    height: 10rem;
+                    margin-bottom: -2rem;
+                    background-color: var(--color-surface-glass);
+                    border: 1px solid var(--color-stroke-primary);
+                    border-radius: 50%;
+                    background-size: cover;
+                    background-position: center;
+                    @include cursor(pointer);
+                    transition: transform var(--transition);
+
+                    &:hover {
+                        transform: scale(1.04);
+                    }
+
+                    @media (max-width: 720px) {
+                        width: 2em;
+                        height: 2em;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .label, .content {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (max-width: 720px) {
+        padding: 0;
+        margin: 0;
+
+        .label {
+            min-height: 0rem;
+        }
+    }
+}
+
+
 .title {
     font-size: 1em;
-    font-weight: 600;
     line-height: 1.1;
 
     .name {
@@ -12,13 +155,15 @@
 .sections {
     display: flex;
     flex-flow: column nowrap;
-    font-size: 0.45em;
+    font-size: 0.38em;
     margin: 1em 0;
     border-bottom: 1px solid var(--color-stroke-secondary);
 
     .title {
-        font-size: 1.2em;
+        font-size: 1.3em;
+        font-weight: 600;
         padding: 1em 0.5em;
+        color: var(--color-text-description);
     }
     .item {
         display: flex;
@@ -61,10 +206,9 @@
             justify-content: center;
 
             .capture {
-                font-weight: 600;
             }
             .description {
-                font-size: 0.7em;
+                font-size: 0.76em;
                 color: var(--color-text-description);
                 
                 &.success {
