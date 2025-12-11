@@ -11,6 +11,7 @@ import Settings from '@/assets/ui-kit/icons/settings';
 import Server from '@/assets/ui-kit/icons/server';
 import Book from '@/assets/ui-kit/icons/book';
 import Cube from '@/assets/ui-kit/icons/cube';
+import Collection from '@/assets/ui-kit/icons/collection';
 
 export const COMPONENT_ICONS = {
   Cloud,
@@ -26,6 +27,7 @@ export const COMPONENT_ICONS = {
   Server,
   Book,
   Cube,
+  Collection
 } as const;
 
 export type ComponentName = keyof typeof COMPONENT_ICONS;

@@ -4,6 +4,14 @@ export interface NavigationSection {
   slug?: string;
 }
 
+export interface ExtendedNavigationSection extends NavigationSection {
+  guideAbout?: string;
+  guideIcon?: string;
+  guideId?: string;
+  guidePriority?: string;
+  guidePosition?: string;
+}
+
 export const isSectionActive = (pathname: string, section: NavigationSection): boolean => {
   if (!pathname || !section?.href) return false;
   

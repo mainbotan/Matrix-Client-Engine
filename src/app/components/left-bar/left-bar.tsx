@@ -27,11 +27,8 @@ export function LeftBar() {
         <div className={clsx(styles.container, styles.compact)}>
             <div className={styles.grid}>
                 <section
-                    data-guide-about="Раздел для управления сотрудниками"
-                    data-guide-icon="Team"
-                    data-guide-id="team-management-section"
-                    data-guide-priority="high"
-                    data-guide-position="bottom"
+                    data-guide-about="Здесь находятся все организации, в которых вы состоите. Вы так же можете использовать иконки организаций для быстрого перемещения между рабочими пространствами."
+                    data-guide-icon="Collection"
                 className={styles.sections}>
                     <Link href='/account/organizations' className={clsx(styles.section, styles.active)}>
                         <Collection className={styles.svg} />
@@ -44,7 +41,10 @@ export function LeftBar() {
                         <span className={styles.marker} />
                     </Link>
                     <section className={styles.inter}><span className={styles.line} /></section>
-                    <Link href='/organization/create' className={styles.add}>
+                    <Link href='/organization/create' className={styles.add}
+                        data-guide-about="Создание нового рабочего пространства для организации."
+                        data-guide-icon="Plus"
+                    >
                         <Plus className={styles.svg} />
                     </Link>
                 </section>

@@ -28,6 +28,7 @@ export function RightBar() {
               href={section.href}
               className={className}
               title={section.slug ? `Перейти к ${section.slug}` : ''}
+              data-guide-about={section.guideAbout ?? ''}
             >
               <div className={styles.iconWrapper}>
                 <IconComponent className={styles.svg} />

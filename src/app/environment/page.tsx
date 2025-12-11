@@ -61,7 +61,10 @@ export default function Page() {
                     <span></span>
                   )}
                 </div>
-                <div className={styles.name}>{theme.name}</div>
+                <div className={styles.info}>
+                  <div className={styles.name}>{theme.name}</div>
+                  <div className={styles.description}>{theme.description}</div>
+                </div>
               </div>
             ))}
           </div>

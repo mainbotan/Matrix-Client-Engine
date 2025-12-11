@@ -7,12 +7,14 @@ export const sectionsConfig = [
         href: '/account',
         exact: false,
         slug: 'account',
-        icon: Account // передаем компонент, а не элемент
+        icon: Account,
+        guideAbout: 'Управление аккаунтом. Здесь находятся все базовые настройки, связанные только с вашим аккаунтом пользователя, а не конкретной организацией.'
     },
     {
         href: '/environment',
         exact: false,
         slug: 'environment',
-        icon: Themization
+        icon: Themization,
+        guideAbout: 'Здесь находятся настройки окружения. Адаптируйте внешний вид под себя.'
     }
 ];

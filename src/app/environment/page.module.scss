@@ -41,6 +41,7 @@
         flex-flow: column nowrap;
         gap: 0.4em;
         @include cursor(pointer);
+        width: 10em;
 
         .overview {
             width: 10em;
@@ -58,10 +59,20 @@
                 max-width: 200%;
             }
         }
+        .info {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: .1em;
+            padding: 0 0.2em;
+        }
         .name {
-            font-size: 0.5em;
+            font-size: 0.6em;
             line-height: 1.2;
-            padding: 0 0.6em;
+        }
+        .description {
+            font-size: 0.45em;
+            line-height: 1.2;
+            color: var(--color-text-description);
         }
 
         &:hover {
@@ -73,6 +84,9 @@
             .overview {
                 border-color: var(--color-accent);
             }
+        }
+        @media (max-width: 720px) {
+            width: 100%;
         }
     }
 

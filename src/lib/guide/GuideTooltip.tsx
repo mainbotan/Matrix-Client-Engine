@@ -5,6 +5,7 @@ import { getIconComponent } from './GuideRegistry';
 import { GuideTooltipProps } from './types';
 import styles from './styles/guide.module.scss';
 import clsx from 'clsx';
+import Cloud from '@/assets/ui-kit/icons/cloud';
 
 const TOOLTIP_OFFSET = 10; // px
 
@@ -85,9 +86,13 @@ export default function GuideTooltip({
       aria-live="polite"
     >
       <div className={styles.tooltipContent}>
-        {IconComponent && (
+        {IconComponent ? (
           <div className={styles.iconWrapper}>
             <IconComponent className={styles.icon} />
+          </div>
+        ) : (
+          <div className={styles.iconWrapper}>
+            <Cloud className={styles.icon} />
           </div>
         )}
         <div className={styles.text}>{about}</div>
