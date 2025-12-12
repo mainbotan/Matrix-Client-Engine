@@ -20,7 +20,7 @@ export default function Button({
   fullWidth = false,
   loading = false,
   className,
-  disabled,
+  disabled = false,
   ...props
 }: ButtonProps) {
   const isDisabled = disabled || loading;
@@ -43,6 +43,7 @@ export default function Button({
             [styles.sm]: size === 'sm',
             [styles.bg]: size === 'lg',
             [styles.loading]: loading,
+            [styles.disabled]: disabled
           },
           className
         )}

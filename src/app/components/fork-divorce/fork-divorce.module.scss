@@ -23,10 +23,12 @@
         .focus {
             width: 100%;
             flex-direction: column;
+            height: fit-content;
         }
     }
 }
 
+// Info area
 .col.info {
     display: flex;
     flex-flow: column nowrap;
@@ -107,9 +109,14 @@
         font-size: .6em;
 
         .action {
-            height: 3em;
-            border-radius: 2em;
+            height: 2.5em;
+            border-radius: .9em;
             padding: 0 1.4em;
+            transition: transform var(--transition);
+            
+            &:hover {
+                transform: scale(1.04);
+            }
         }
     }
 
@@ -126,6 +133,8 @@
         }
     }
 }
+
+// Inter line
 .inter {
     display: inline-flex;
 
@@ -145,20 +154,130 @@
         }
     }
 }
+
+// Content area
 .col.content {
-    display: flex;
-    flex-flow: column nowrap;
+    display: block;
+    overflow-y: scroll;
     flex: 1.4;
-    justify-content: center;
     font-size: .9em;
     padding: 0 .5em;
+    overflow-x: hidden;
 
+    .grid {
+        display: flex;
+        flex-flow: column nowrap;
+    }
     .form {
+        display: flex;
+        flex-flow: column nowrap;
         margin: 1em 0;
-        font-size: .7em;
+        font-size: .64em;
+        gap: 2em;
+        
+        .group {
+            display: flex;
+            gap: 1em;
+
+            &.half {
+                flex-flow: row wrap;
+
+                .section {
+                    flex: 1;
+                    max-width: calc(50% - 1em);
+                    min-width: calc(50% - 1em);
+                }
+            }
+        }
+        .section {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: .7em;
+
+            .top {
+                display: flex;
+                flex-flow: row nowrap;
+                gap: 1em;
+            }
+            .capture {
+                display: flex;
+                flex: 1;
+                font-weight: 600;
+                letter-spacing: .02em;
+                flex-flow: row wrap;
+                line-height: 1.2;
+                gap: .2em;
+                font-size: .9em;
+
+                .secondary {
+                    color: var(--color-text-description);
+                    display: none;
+                }
+            }
+            .input {
+                transition: box-shadow var(--transition);
+            }
+            .input:focus {
+                border: 2px solid var(--color-accent);
+                box-shadow: 0 0 5px var(--color-accent);
+            }
+            .status {
+                display: inline-flex;
+                flex-flow: row nowrap;
+                gap: .7em;
+                font-size: .9em;
+
+                .icon {
+                    display: inline-flex;
+                    align-items: start;
+                    justify-content: center;
+
+                    .circle {
+                        display: flex;
+                        width: 1.3em;
+                        height: 1.3em;
+                        background-color: var(--color-blue);
+                        border-radius: 50%;
+                        align-items: center;
+                        justify-content: center;
+
+                        .svg {
+                            width: .7em;
+                            height: .7em;
+                            fill: var(--color-accent-text-primary);
+                        }
+                    }
+                }
+                .text {
+                    display: flex;
+                    align-items: center;
+                    line-height: 1.2;
+                    color: var(--color-blue);
+                }
+                &.error {
+                    .icon .circle {
+                        background-color: var(--color-red);
+                    }
+                    .text {
+                        color: var(--color-red);
+                    }
+                }
+            }
+            .description {
+                font-size: .88em;
+                line-height: 1.2;
+                color: var(--color-text-description);
+            }
+        }
+    }
+
+    @media (max-width: 720px) {
+        overflow: auto;
     }
 }
 
+
+// General
 .col.content, .col.info {
 
     @keyframes show-title {

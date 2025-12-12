@@ -62,4 +62,15 @@
   &.sm {
     font-size: 0.75em;
   }
+
+  // States
+  &.disabled {
+      background-color: var(--color-surface-primary);
+      color: var(--color-text-primary);
+      cursor: not-allowed;
+
+      &:hover {
+          transform: none !important;
+      }
+  }
 }
