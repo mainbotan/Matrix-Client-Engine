@@ -4,12 +4,14 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import Input from '@/assets/ui-kit/input/input';
 import Keyhole from '@/assets/ui-kit/icons/keyhole';
+import Spinner from '@/assets/ui-kit/spinner/spinner';
+import Error from '@/assets/ui-kit/icons/error';
 
 // Функция для генерации точек
 const generatePoints = () => {
-    const activeCount = Math.floor(Math.random() * 15); // 0-14
+    const activeCount = Math.floor(Math.random() * 31); // 0-14
     
-    return Array.from({ length: 14 }, (_, index) => (
+    return Array.from({ length: 30 }, (_, index) => (
         <span
             key={index}
             className={clsx(
@@ -29,6 +31,13 @@ export default function Page() {
                 <div className={styles.search}>
                     <Input className={styles.input} variant='default' fullWidth placeholder='Название или ID организации' />
                 </div>
+                {/* <div className={styles.loading}>
+                    <div className={styles.icon}>
+                        <Error className={styles.svg} />
+                    </div>
+                    <Spinner size='lg' variant='accent' />
+                    <div className={styles.capture}>Ищем...</div>
+                </div> */}
                 <div className={styles.items}>
                     {Array.from({ length: itemsCount }, (_, index) => (
                         <div className={styles.item} key={index}>

@@ -35,6 +35,43 @@
     }
 }
 
+// Loading & Empty Canas
+.loading {
+    display: flex;
+    min-height: 10rem;
+    flex-flow: column nowrap;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+        width: 2.4em;
+        height: 2.4em;
+        overflow: hidden;
+
+        @keyframes animate-svg {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .svg {
+            fill: var(--color-icon-primary);
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            animation: animate-svg 0.4s forwards ease-out;
+        }
+    }
+    .capture {
+        font-size: .55em;
+        text-align: center;
+        line-height: 1.2;
+    }
+}
+
 // Org plans
 .items {
     display: flex;

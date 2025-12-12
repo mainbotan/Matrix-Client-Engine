@@ -197,9 +197,19 @@
         gap: 0.2em;
         @include cursor(pointer);
 
+        .circle {
+            width: 1.6rem;
+            height: 1.6rem;
+            background-color: var(--color-surface-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color var(--transition);
+        }
         .svg {
-            width: 0.5em;
-            height: 0.5em;
+            width: 0.4em;
+            height: 0.4em;
             fill: var(--color-icon-primary);
             transition: fill var(--transition), transform var(--transition);
         }
@@ -209,6 +219,14 @@
             @include text-ellipsis();
             text-align: center;
             transition: color var(--transition);
+        }
+        &.active {
+            .circle {
+                background-color: var(--color-contrast);
+            }
+            .svg {
+                fill: var(--color-leader) !important;
+            }
         }
         &:hover {
             .svg {
