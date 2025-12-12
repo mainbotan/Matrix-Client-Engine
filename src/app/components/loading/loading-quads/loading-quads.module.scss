@@ -1,0 +1,72 @@
+.container {
+  --quad-size: 1em;
+  --gap-size: calc(var(--quad-size) * 0.2);
+  --animation-duration: 1.6s;
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.quads {
+  position: relative;
+  width: calc(var(--quad-size) * 2 + var(--gap-size));
+  height: calc(var(--quad-size) * 2 + var(--gap-size));
+}
+
+.quad {
+  position: absolute;
+  width: var(--quad-size);
+  height: var(--quad-size);
+  background-color: currentColor;
+  border-radius: .2em;
+  animation: quadMove var(--animation-duration) infinite ease-in-out;
+  
+  &:nth-child(1) {
+    top: 0;
+    left: 0;
+    animation-delay: calc(var(--animation-duration) * -0.8);
+  }
+  
+  &:nth-child(2) {
+    top: 0;
+    left: calc(var(--quad-size) + var(--gap-size));
+    animation-delay: calc(var(--animation-duration) * -0.6);
+  }
+  
+  &:nth-child(3) {
+    top: calc(var(--quad-size) + var(--gap-size));
+    left: 0;
+    animation-delay: calc(var(--animation-duration) * -0.4);
+  }
+  
+  &:nth-child(4) {
+    top: calc(var(--quad-size) + var(--gap-size));
+    left: calc(var(--quad-size) + var(--gap-size));
+    animation-delay: calc(var(--animation-duration) * -0.2);
+  }
+}
+
+@keyframes quadMove {
+  0%, 100% {
+    transform: translate(0, 0) scale(0.3);
+    opacity: 0.3;
+  }
+  20% {
+    transform: translate(calc(var(--gap-size) * -0.5), calc(var(--gap-size) * -0.5)) scale(0.6);
+    opacity: 0.6;
+  }
+  40% {
+    transform: translate(calc(var(--gap-size) * -1), calc(var(--gap-size) * -1)) scale(0.9);
+    opacity: 0.9;
+  }
+  60% {
+    transform: translate(calc(var(--gap-size) * -1.5), calc(var(--gap-size) * -1.5)) scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(calc(var(--gap-size) * -1), calc(var(--gap-size) * -1)) scale(0.9);
+    opacity: 0.9;
+  }
+}

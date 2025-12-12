@@ -6,13 +6,14 @@ import Input from '@/assets/ui-kit/input/input';
 import Select from '@/assets/ui-kit/select/select';
 import clsx from 'clsx';
 import { Plans } from './plans/plans';
+import Link from 'next/link';
 
 export default function Page() {
     return (
         <div className={styles.container}>
             <div className={styles.focus}>
                 <div className={clsx(styles.col, styles.info, styles.start)}>
-                    <div className={styles.icon}><Team className={clsx(styles.svg, styles.accent)} /></div>
+                    <div className={styles.icon}><Team className={clsx(styles.svg)} /></div>
                     <h2>Создание организации</h2>
                     <div className={styles.description}>
                         Создайте рабочее пространство для всей команды и используйте возможности вашего тарифного плана.
@@ -26,7 +27,9 @@ export default function Page() {
                         </div>
                     </div>
                     <div className={styles.actions}>
-                        <Button className={clsx(styles.action)} variant='contrast' disabled>Создать</Button>
+                        <Link href='/organization/configuring' className={styles.link}>
+                            <Button className={clsx(styles.action)} variant='contrast'>Создать</Button>
+                        </Link>
                     </div>
                 </div>
                 <div className={styles.inter}><span className={clsx(styles.line)} /></div>

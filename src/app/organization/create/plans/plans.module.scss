@@ -214,6 +214,9 @@
                 }
             }
             &.trial {
+                background: linear-gradient(315deg, #e46843, #d4229b);
+                color: var(--color-accent-text-primary);
+
                 .triangle {
                     position: absolute;
                     width: 4em;

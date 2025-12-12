@@ -17,8 +17,9 @@
         max-height: 50%;
         display: flex;
         flex-flow: column nowrap;
+        align-items: center;
         font-size: 1em;
-        gap: 0.5em;
+        gap: 1em;
         opacity: 0;
         animation: show-focus 0.4s forwards;
         margin-bottom: 3rem;

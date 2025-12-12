@@ -5,7 +5,7 @@ export function Loading() {
     return (
         <div className={styles.container}>
             <div className={styles.focus}>
-                <Spinner variant='brand' size='md' className={styles.spinne} />
+                <Spinner variant='brand' size='md' className={styles.spinner} />
             </div>
         </div>
     )

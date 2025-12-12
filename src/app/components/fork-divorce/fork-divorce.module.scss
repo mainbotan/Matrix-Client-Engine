@@ -100,7 +100,7 @@
             top: -3.5em;
             right: -3.5em;
             transform: rotate(-45deg);
-            background: linear-gradient(135deg, #5C17D5, #04ffb4);
+            background: linear-gradient(315deg, #E46843, #D4229B);
         }
     }
     .actions {
@@ -127,6 +127,9 @@
         .actions {
             flex-direction: column;
 
+            .link {
+                width: 100%;
+            }
             .action {
                 width: 100%;
             }
@@ -161,7 +164,7 @@
     overflow-y: scroll;
     flex: 1.4;
     font-size: .9em;
-    padding: 0 .5em;
+    padding: .5em .5em;
     overflow-x: hidden;
 
     .grid {
@@ -184,8 +187,7 @@
 
                 .section {
                     flex: 1;
-                    max-width: calc(50% - 1em);
-                    min-width: calc(50% - 1em);
+                    width: calc(50% - .2em);
                 }
             }
         }

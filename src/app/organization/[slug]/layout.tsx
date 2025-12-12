@@ -70,7 +70,7 @@ export default function Layout({
                 </div> */}
                 {children}
             </div>
-            <div className={styles.history}>
+            {/* <div className={styles.history}>
               <div className={clsx(styles.inner)}>
                 <div className={styles.grid}>
                   <div className={styles.top}>
@@ -95,7 +95,7 @@ export default function Layout({
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
         </div>
     )
 }
