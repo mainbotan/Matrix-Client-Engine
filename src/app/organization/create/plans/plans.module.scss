@@ -125,6 +125,16 @@
         gap: 1em;
         flex-flow: row nowrap;
 
+        @keyframes animate-card {
+            0% {
+                opacity: 0;
+                transform: translateX(-2em);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
         .item {
             width: 10em;
             min-width: 10em;
@@ -141,6 +151,15 @@
             gap: .5em;
             overflow: hidden;
             transition: border-color var(--transition), transform var(--transition), border-width var(--transition);
+            animation: animate-card 0.3s forwards;
+            opacity: 0;
+            transform: translateX(-2em);
+
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i}) {
+                    animation-delay: #{$i * 100}ms;
+                }
+            }
 
             .marker {
                 position: absolute;
@@ -214,6 +233,7 @@
                 }
             }
             &.trial {
+                min-width: 15em;
                 background: linear-gradient(315deg, #e46843, #d4229b);
                 color: var(--color-accent-text-primary);
 

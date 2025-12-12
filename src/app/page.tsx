@@ -83,22 +83,22 @@ export default function Page() {
                             <section className={styles.title}>
                                 Аккаунт
                             </section>
-                            <section className={styles.section}>
+                            <Link href='/account' className={styles.section}>
                                 <span className={styles.icon}>
                                     <Id className={styles.svg} />
                                 </span>
                                 <span className={styles.info}>
                                     <div className={styles.name}>Управление аккаунтом</div>
                                 </span>
-                            </section>
-                            <section className={styles.section}>
+                            </Link>
+                            <Link href='/environment' className={styles.section}>
                                 <span className={styles.icon}>
                                     <Themization className={styles.svg} />
                                 </span>
                                 <span className={styles.info}>
                                     <div className={styles.name}>Настройка окружения</div>
                                 </span>
-                            </section>
+                            </Link>
                         </div>
                         <div className={styles.col}>
                             <section className={styles.title}>
