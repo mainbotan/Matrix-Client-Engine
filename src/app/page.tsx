@@ -112,28 +112,20 @@ export default function Page() {
                                     <div className={styles.name}>Документация</div>
                                 </span>
                             </section>
-                            <section className={styles.section}>
+                            <Link href='http://localhost:3003/' className={styles.section}>
                                 <span className={styles.icon}>
                                     <Code className={styles.svg} />
                                 </span>
                                 <span className={styles.info}>
                                     <div className={styles.name}>DEV Platform</div>
                                 </span>
-                            </section>
+                            </Link>
                             <section className={styles.section}>
                                 <span className={styles.icon}>
                                     <Wallet className={styles.svg} />
                                 </span>
                                 <span className={styles.info}>
                                     <div className={styles.name}>Ценообразвание тарифов</div>
-                                </span>
-                            </section>
-                            <section className={styles.section}>
-                                <span className={styles.icon}>
-                                    <Settings className={styles.svg} />
-                                </span>
-                                <span className={styles.info}>
-                                    <div className={styles.name}>Сторонним разработчикам</div>
                                 </span>
                             </section>
                             <section className={styles.section}>
