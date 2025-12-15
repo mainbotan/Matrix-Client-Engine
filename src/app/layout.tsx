@@ -10,7 +10,7 @@ import { BottomBar } from "./components/bottom-bar/bottom-bar";
 import { ThemeInitializer } from './theme-initializer';
 
 export const metadata: Metadata = {
-  title: "Matrix One - Рабочее пространство.",
+  title: "Yieldaa - Рабочее пространство.",
   description: "",
   appleWebApp: {
     capable: true,

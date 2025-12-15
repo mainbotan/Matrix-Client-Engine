@@ -5,7 +5,7 @@ export interface GuideState {
 }
 
 export class GuideStorage {
-  private static readonly KEY = 'matrix-guide-state';
+  private static readonly KEY = 'Yieldaa-guide-state';
   private static readonly VERSION = '1.0';
 
   static getState(): GuideState {

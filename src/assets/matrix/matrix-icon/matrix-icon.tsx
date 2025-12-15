@@ -1,6 +1,6 @@
-import styles from './matrix-icon.module.scss';
+import styles from './Yieldaa-icon.module.scss';
 
-export function MatrixIcon() {
+export function YieldaaIcon() {
     return (
         <div className={styles.container}>
             <svg 

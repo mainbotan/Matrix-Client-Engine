@@ -37,7 +37,7 @@ export default function Page() {
                     <div className={styles.capture}>Рабочее пространство</div>
                     <div className={styles.description}>
                         Собрали для вас вспомогательные разделы и действия, которые помогут
-                        быстро привыкнуть к Matrix.
+                        быстро привыкнуть к Yieldaa.
                     </div>
                 </div>
                 <div className={styles.content}>
